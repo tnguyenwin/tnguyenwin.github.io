@@ -1,0 +1,16 @@
+{
+    "tabWidth": 4,
+    "useTabs": false,
+    "htmlWhitespaceSensitivity": "strict",
+    "singleAttributePerLine": true,
+    "trailingComma": "none",
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "arrowParens": "avoid",
+    "arrowFunctionParentheses": "avoid",
+    "bracketSpacing": true,
+    "bracketSameLine": true,
+    "proseWrap": "preserve",
+    "plugins": ["prettier-plugin-tailwindcss"],
+    "tailwindStylesheet": "./app/globals.css"
+}
