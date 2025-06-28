@@ -14,11 +14,13 @@ export default function R3F({
     cameraFOV
 }) {
     const Model = () => {
-        const { viewport } = useThree();
+        const { setSize } = useThree();
         const [gltf, setGLTF] = useState(null);
         const { set } = useThree();
 
         useEffect(() => {
+            setSize(384, 384);
+
             const gltfLoader = new GLTFLoader();
             const dracoLoader = new DRACOLoader();
 
@@ -32,41 +34,6 @@ export default function R3F({
                               set({ camera: child });
 
                               child.updateProjectionMatrix();
-
-                              //   child.name === 'Room_Camera'
-                              //       ? console.log(child)
-                              //       : undefined;
-
-                              const updateZoom = () => {
-                                  //   const screenWidth = window.innerWidth;
-                                  //   const screenHeight = window.innerWidth;
-                                  //   const baseZoom = window.devicePixelRatio;
-                                  //   let zoomFactor = baseZoom;
-
-                                  //   screenWidth < 1280
-                                  //       ? (() => {
-                                  //             zoomFactor *=
-                                  //                 (screenWidth * 1) / 1280;
-                                  //             child.aspect =
-                                  //                 viewport.width /
-                                  //                 viewport.height;
-                                  //         })()
-                                  //       : (child.zoom = zoomFactor);
-                                  // child.aspect = screenWidth / screenHeight;
-
-                                  //   child.zoom = 1.5;
-                                  child.aspect =
-                                      viewport.width / viewport.height;
-                                  //   child.fov = cameraFOV;
-                                  child.updateProjectionMatrix();
-                              };
-
-                              updateZoom();
-
-                              window.addEventListener('resize', updateZoom);
-
-                              //   child.fov = cameraFOV;
-                              //   child.updateProjectionMatrix();
                           })()
                         : undefined;
 
@@ -88,8 +55,6 @@ export default function R3F({
 
                 setGLTF(loaded);
             });
-
-            // return () => window.removeEventListener('resize', () => {});
         }, [path, lampIntensity, cameraFOV]);
 
         return gltf ? <primitive object={gltf.scene} /> : undefined;
@@ -98,9 +63,7 @@ export default function R3F({
     return (
         <Canvas
             shadows
-            className={`${testBackgrounds ? 'bg-red-600' : ''}`}
-            // resize={{ debounce: 0 }}
-        >
+            className={`${testBackgrounds ? 'bg-red-600' : ''}`}>
             <Suspense
                 fallback={
                     <Html center>
@@ -123,10 +86,6 @@ export default function R3F({
                         </svg>
                     </Html>
                 }>
-                {/* <Environment
-                    files='./interior.exr'
-                    environmentIntensity={0.375}
-                /> */}
                 <Model />
             </Suspense>
         </Canvas>

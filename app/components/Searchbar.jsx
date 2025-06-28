@@ -1,9 +1,11 @@
+'use client';
+
 import { styleDefaults } from '../globals.jsx';
 
 export default function Searchbar() {
     return (
         <li
-            className={`group items-center outline ${styleDefaults.outlineColor} rounded-full ${styleDefaults.outlineColorHover} m-4 mb-8 p-2 xl:m-0 xl:p-0`}>
+            className={`group items-center outline ${styleDefaults.outlineColor} rounded-full ${styleDefaults.outlineColorHover} m-4 mb-8 p-2 lg:m-0 lg:p-0`}>
             <div className='flex'>
                 <label className='fill-neutral-500 p-2'>
                     <svg
