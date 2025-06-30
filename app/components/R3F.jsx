@@ -9,18 +9,15 @@ import { useState, useEffect } from 'react';
 
 export default function R3F({
     testBackgrounds,
-    path,
-    lampIntensity,
-    cameraFOV
+    path
+    // lampIntensity,
+    // cameraFOV
 }) {
     const Model = () => {
-        const { setSize } = useThree();
         const [gltf, setGLTF] = useState(null);
         const { set } = useThree();
 
         useEffect(() => {
-            setSize(384, 384);
-
             const gltfLoader = new GLTFLoader();
             const dracoLoader = new DRACOLoader();
 
@@ -35,35 +32,35 @@ export default function R3F({
 
                               child.updateProjectionMatrix();
                           })()
-                        : undefined;
+                        : null;
 
                     child.isLight
                         ? (() => {
-                              child.castShadow = true;
-                              child.intensity = lampIntensity;
+                              //   child.castShadow = true;
+                              //   child.intensity = lampIntensity;
                           })()
-                        : undefined;
+                        : null;
 
                     child.isMesh
                         ? (() => {
-                              child.castShadow = true;
-                              child.receiveShadow = true;
+                              //   child.castShadow = true;
+                              //   child.receiveShadow = true;
                               child.material.side = 0;
                           })()
-                        : undefined;
+                        : null;
                 });
 
                 setGLTF(loaded);
             });
-        }, [path, lampIntensity, cameraFOV]);
+        }, []);
 
-        return gltf ? <primitive object={gltf.scene} /> : undefined;
+        return gltf ? <primitive object={gltf.scene} /> : null;
     };
 
     return (
         <Canvas
             shadows
-            className={`${testBackgrounds ? 'bg-red-600' : ''}`}>
+            className={`${testBackgrounds ? 'bg-red-600' : ''} lg:!size-[384px]`}>
             <Suspense
                 fallback={
                     <Html center>

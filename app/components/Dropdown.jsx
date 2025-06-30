@@ -1,7 +1,7 @@
 'use client';
 
 import { styleDefaults, styleTemplates } from '../globals.jsx';
-
+import { geistMono } from '../layout.jsx';
 import Link from './Link.jsx';
 
 export default function Dropdown({ title, href, items }) {
@@ -47,7 +47,8 @@ export default function Dropdown({ title, href, items }) {
                                                 href={item.href}>
                                                 {item.icon}
                                                 <div className='flex flex-col justify-center'>
-                                                    <div className="flex items-center gap-2 font-['Geist_Mono']">
+                                                    <div
+                                                        className={`flex items-center gap-2 ${geistMono.className}`}>
                                                         <div className='font-bold'>
                                                             {item.title}
                                                         </div>

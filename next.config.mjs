@@ -3,7 +3,10 @@ const nextConfig = {
     devIndicators: false,
     reactStrictMode: false,
     transpilePackages: ['three'],
-    output: 'export'
+    output: 'export',
+    images: {
+        unoptimized: true
+    }
 };
 
 export default nextConfig;
