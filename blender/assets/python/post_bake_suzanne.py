@@ -37,4 +37,3 @@ if duplicates:
 
 CSI = "\x1B["
 print(CSI + "32m" + "\n[SUCCESS]\n" + CSI + "0m")
-    

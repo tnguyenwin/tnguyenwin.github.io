@@ -6,7 +6,7 @@ import Navbar from './components/Navbar.jsx';
 import Image from 'next/image';
 import Link from './components/Link.jsx';
 import SectionGeneric, { Row } from './components/Section.jsx';
-import R3F from './components/R3F.jsx';
+import R3F, { Credits } from './components/R3F.jsx';
 import Footer from './components/Footer.jsx';
 import ScrollToTop from './components/ScrollToTop.jsx';
 
@@ -83,8 +83,12 @@ export default function Home() {
                         <R3F
                             testBackgrounds={testBackgrounds}
                             path='./model_room.glb'
-                            lampIntensity={16}
-                            cameraFOV={60}
+                            credits={[
+                                'bottom-0 scale-x-0 group-hover:scale-x-100',
+                                'Basic Room Made w/ Blender by Me'
+                            ]}
+                            // lampIntensity={16}
+                            // cameraFOV={60}
                         />
                         {/* <div className={styleTemplates.threeGradient}></div> */}
                     </Row>
@@ -105,6 +109,12 @@ export default function Home() {
                                 height='384'
                             />
                         </div>
+                        <Credits
+                            credits={[
+                                'bottom-[-10px] scale-x-0 group-hover:scale-x-100',
+                                'Picture of Myself'
+                            ]}
+                        />
                         {/* <div className={styleTemplates.threeGradient}></div> */}
                     </Row>
                     <Row
@@ -296,8 +306,12 @@ export default function Home() {
                         <R3F
                             testBackgrounds={testBackgrounds}
                             path='./model_suzanne.glb'
-                            lampIntensity={1}
-                            cameraFOV={90}
+                            credits={[
+                                'bottom-0 scale-x-0 group-hover:scale-x-100',
+                                'Masked Suzanne Made w/ Blender by Me'
+                            ]}
+                            // lampIntensity={1}
+                            // cameraFOV={90}
                         />
                         {/* <div className={styleTemplates.threeGradient}></div> */}
                     </Row>
@@ -311,8 +325,12 @@ export default function Home() {
                         <R3F
                             testBackgrounds={testBackgrounds}
                             path='./model_suzanne.glb'
-                            lampIntensity={1}
-                            cameraFOV={90}
+                            credits={[
+                                'bottom-0 -scale-x-0 group-hover:-scale-x-100',
+                                'Masked Suzanne Made w/ Blender by Me'
+                            ]}
+                            // lampIntensity={1}
+                            // cameraFOV={90}
                         />
                         {/* <div className={styleTemplates.threeGradient}></div> */}
                     </Row>

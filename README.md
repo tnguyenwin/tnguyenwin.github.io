@@ -7,9 +7,9 @@
 
 ### TODO
 
-- Add license to GitHub repository.
-- Port site to GitHub Pages.
-- Complete navbar dropdown menus.
-- Transition mobile menu toggle.
-- Tooltips for disclaimer credits when hovering 3D models.
-- Allow 3D model camera rotation via mousewheel.
+- Add animation transition to mobile menu toggle process.
+- Add mobile, touch-based visibility toggling for 3D model credits.
+
+### FEEDBACK
+
+- Allow mousewheel camera rotation for 3D models.

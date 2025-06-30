@@ -91,7 +91,7 @@ export default function Navbar() {
                     </ul>
                     {/* Nav - Left - Desktop */}
                     <ul
-                        className={`${isMobile && mobileCollapsed ? 'hidden' : ''} flex flex-col lg:h-[72px] lg:flex-row`}>
+                        className={`${isMobile && mobileCollapsed ? 'hidden' : ''} flex origin-top flex-col lg:h-[72px] lg:flex-row`}>
                         {/* Services */}
                         <Dropdown
                             title='Services'
@@ -101,7 +101,7 @@ export default function Navbar() {
                                 {
                                     icon: (
                                         <svg
-                                            className='rounded-lg border-2 border-white bg-white p-4 text-black group-hover/services:bg-transparent group-hover/services:text-white'
+                                            className={`${styleTemplates.button} rounded-lg p-4 group-hover/services:bg-transparent group-hover/services:text-black dark:group-hover/services:text-white`}
                                             stroke='currentColor'
                                             fill='currentColor'
                                             strokeWidth='0'
@@ -121,7 +121,7 @@ export default function Navbar() {
                                 {
                                     icon: (
                                         <svg
-                                            className='rounded-lg border-2 border-white bg-white p-4 text-black group-hover/services:bg-transparent group-hover/services:text-white'
+                                            className={`${styleTemplates.button} rounded-lg p-4 group-hover/services:bg-transparent group-hover/services:text-black dark:group-hover/services:text-white`}
                                             stroke='currentColor'
                                             fill='currentColor'
                                             strokeWidth='0'
@@ -140,7 +140,7 @@ export default function Navbar() {
                                 {
                                     icon: (
                                         <svg
-                                            className='rounded-lg border-2 border-white bg-white p-4 text-black group-hover/services:bg-transparent group-hover/services:text-white'
+                                            className={`${styleTemplates.button} rounded-lg p-4 group-hover/services:bg-transparent group-hover/services:text-black dark:group-hover/services:text-white`}
                                             stroke='currentColor'
                                             fill='currentColor'
                                             strokeWidth='0'
@@ -162,30 +162,73 @@ export default function Navbar() {
                             isNavLink={true}
                             href='/portfolio'
                             body='Portfolio'
-                            extraClasses={`block xl:hidden h-full p-4 ${styleTemplates.navlinkHover}`}
+                            extraClasses={`block lg:hidden h-full p-4 ${styleTemplates.navlinkHover}`}
                         />
                         {/* Portfolio - Desktop */}
-                        {/* <Link
-                                        isNavLink={true}
-                                        href='/portfolio'
-                                        body={
-                                            <div className='flex items-center gap-2'>
-                                                Portfolio
-                                                <svg
-                                                    className='mt-[3px] hidden duration-300 ease-in-out group-hover:rotate-[-180deg] lg:block'
-                                                    stroke='currentColor'
-                                                    fill='currentColor'
-                                                    strokeWidth='0'
-                                                    viewBox='0 0 448 512'
-                                                    height='12px'
-                                                    width='12px'
-                                                    xmlns='http://www.w3.org/2000/svg'>
-                                                    <path d='M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z'></path>
-                                                </svg>
-                                            </div>
-                                        }
-                                        extraClasses={`h-full p-4 ${styleTemplates.navlinkHover}`}
-                                    /> */}
+                        <Dropdown
+                            title='Portfolio'
+                            href='/portfolio'
+                            items={[
+                                // ALL
+                                {
+                                    icon: (
+                                        <svg
+                                            className={`${styleTemplates.button} rounded-lg p-4 group-hover/portfolio:bg-transparent group-hover/portfolio:text-black dark:group-hover/portfolio:text-white`}
+                                            stroke='currentColor'
+                                            fill='currentColor'
+                                            strokeWidth='0'
+                                            viewBox='0 0 512 512'
+                                            height='64px'
+                                            width='64px'
+                                            xmlns='http://www.w3.org/2000/svg'>
+                                            <path d='M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4l54.1 0 109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109 0-54.1c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7L352 176c-8.8 0-16-7.2-16-16l0-57.4c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z'></path>
+                                        </svg>
+                                    ),
+                                    title: 'ALL',
+                                    body: 'A showcase of my all of my work.',
+                                    href: '/portfolio'
+                                },
+                                {},
+                                // TECHNOLOGY
+                                {
+                                    icon: (
+                                        <svg
+                                            className={`${styleTemplates.button} rounded-lg p-4 group-hover/portfolio:bg-transparent group-hover/portfolio:text-black dark:group-hover/portfolio:text-white`}
+                                            stroke='currentColor'
+                                            fill='currentColor'
+                                            strokeWidth='0'
+                                            viewBox='0 0 512 512'
+                                            height='64px'
+                                            width='64px'
+                                            xmlns='http://www.w3.org/2000/svg'>
+                                            <path d='M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4l54.1 0 109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109 0-54.1c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7L352 176c-8.8 0-16-7.2-16-16l0-57.4c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z'></path>
+                                        </svg>
+                                    ),
+                                    title: 'TECHNOLOGY',
+                                    body: 'A showcase of my technology-related work.',
+                                    href: '/portfolio#technology'
+                                },
+                                // BUSINESS
+                                {
+                                    icon: (
+                                        <svg
+                                            className={`${styleTemplates.button} rounded-lg p-4 group-hover/portfolio:bg-transparent group-hover/portfolio:text-black dark:group-hover/portfolio:text-white`}
+                                            stroke='currentColor'
+                                            fill='currentColor'
+                                            strokeWidth='0'
+                                            viewBox='0 0 512 512'
+                                            height='64px'
+                                            width='64px'
+                                            xmlns='http://www.w3.org/2000/svg'>
+                                            <path d='M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4l54.1 0 109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109 0-54.1c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7L352 176c-8.8 0-16-7.2-16-16l0-57.4c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z'></path>
+                                        </svg>
+                                    ),
+                                    title: 'BUSINESS',
+                                    body: 'A showcase of my business-related work.',
+                                    href: '/portfolio#business'
+                                }
+                            ]}
+                        />
                         {/* Blog */}
                         <Link
                             isNavLink={true}
