@@ -2,8 +2,10 @@
 
 ECHO ----
 ECHO 1 - [ dev ]
+@REM ECHO 2 - [ optimize-glb ]
 ECHO 2 - [ build ]
 ECHO 3 - [ serve ]
+ECHO 9 - [ git reset --soft HEAD~1 ]
 ECHO 0 - [ upgrade-interactive --latest ]
 ECHO ----
 
@@ -13,6 +15,10 @@ IF %input% == 1 (
     CALL yarn run dev
 )
 
+@REM IF %input% == 2 (
+@REM     CALL yarn run optimize-glb
+@REM )
+
 IF %input% == 2 (
     CALL yarn run build
 )
@@ -20,6 +26,11 @@ IF %input% == 2 (
 IF %input% == 3 (
     CALL yarn run serve
 )
+
+IF %input% == 9 (
+    CALL git reset --soft HEAD~1
+)
+
 
 IF %input% == 0 (
     CALL yarn upgrade-interactive --latest

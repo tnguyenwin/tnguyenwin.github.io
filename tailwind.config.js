@@ -2,12 +2,12 @@
 module.exports = {
     content: ['./app/**/*.{js,jsx}'],
     safelist: [
-        'group/services',
-        'group-hover/services:translate-x-1',
+        'peer/portfolio',
+        'lg:peer-hover/portfolio:block',
+        'peer-hover/portfolio:opacity-100',
         'group/portfolio',
-        'group-hover/portfolio:translate-x-1'
+        'group-hover/portfolio:translate-x-1',
+        'lg:grid-cols-2'
     ],
-    theme: { extend: {} },
-    darkMode: 'class',
-    plugins: []
+    darkMode: 'class'
 };

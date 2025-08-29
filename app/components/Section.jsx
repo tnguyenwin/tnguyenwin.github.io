@@ -1,46 +1,85 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
+import { styleTemplates } from '../globals';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import ScrollToTop from './ScrollToTop';
 
-export const Row = ({ children, extraClasses }) => (
-    <div className={`${extraClasses || ''}`}>{children}</div>
-);
-
-export default function SectionGeneric({ id, children, extraClasses }) {
+export default function SectionGeneric({
+    id,
+    children,
+    extraClasses,
+    hasViewportHeight
+}) {
     const [mounted, setMounted] = useState(false);
-    const [baseZoom, setBaseZoom] = useState(null);
+    const refSection = useRef(null);
+    const handleZoom2 = () =>
+        refSection.current.style.setProperty(
+            '--base-zoom',
+            Math.min(window.devicePixelRatio, 1)
+        );
+    const [pageInit, setPageInit] = useState(false);
 
     useEffect(() => {
-        const handleZoom2 = () => setBaseZoom(window.devicePixelRatio);
-
         handleZoom2();
 
         window.addEventListener('resize', handleZoom2);
 
+        const timeout = setTimeout(() => setPageInit(true), 1);
+
         setMounted(true);
 
-        return () => window.removeEventListener('resize', handleZoom2);
+        return () => {
+            window.removeEventListener('resize', handleZoom2);
+
+            clearTimeout(timeout);
+        };
     }, []);
 
-    return !mounted ? null : (
+    return !mounted && refSection.current ? null : (
         <section
-            id={`section-${id} p-16`}
-            className='relative'>
-            <Image
-                // className='absolute top-0 left-0 z-[-2] hidden size-full object-cover opacity-[37.5%] dark:block'
-                className='absolute top-0 left-0 z-[-2] size-full object-cover opacity-[9.375%] dark:opacity-[37.5%]'
-                src='/pattern.png'
-                alt=''
-                width='1024'
-                height='1024'
-            />
-            {/* <div className='fixed top-0 left-0 z-[-3] size-full bg-[linear-gradient(-135deg,_black_0%,_#101721_50%,_black_100%)]'></div> */}
+            id={id}
+            className={`relative p-4 transition duration-1000 ease-in-out ${pageInit ? 'opacity-100' : 'opacity-0'}`}>
+            <div className='absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.05)_1px,transparent_1px)] bg-[size:48px_48px] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)]'></div>
             <div
-                className={`relative container mx-auto flex items-center justify-center lg:min-h-[calc((100vh-109px)*var(--base-zoom))] lg:gap-32 ${extraClasses || ''} lg:flex-row`}
-                style={{ '--base-zoom': baseZoom }}>
+                ref={refSection}
+                className={`relative container mx-auto flex items-center justify-center ${!hasViewportHeight ? 'lg:min-h-[calc((100vh-109px)*var(--base-zoom))]' : ''} lg:gap-32 ${extraClasses || ''} lg:flex-row`}>
                 {children}
             </div>
         </section>
     );
 }
+
+export const Row = ({ children, extraClasses }) => (
+    <div className={`${extraClasses || ''}`}>{children}</div>
+);
+
+export const WIP = ({ title, subtitle, body, buttonHref, buttonBody }) => (
+    <>
+        {/* Navbar */}
+        <Navbar />
+        {/* Main */}
+        <main>
+            <SectionGeneric>
+                <Row extraClasses='flex flex-col lg:gap-4 items-center p-4'>
+                    <h1 className='text-4xl font-black lg:text-7xl'>{title}</h1>
+                    <h2 className='text-lg font-black lg:text-3xl'>
+                        {subtitle}
+                    </h2>
+                    <p className='text-sm font-medium lg:text-2xl'>{body}</p>
+                    <a
+                        className={`mt-2 lg:m-0 ${styleTemplates.buttonPrimary}`}
+                        href={buttonHref}>
+                        {buttonBody}
+                    </a>
+                </Row>
+            </SectionGeneric>
+        </main>
+        {/* Footer */}
+        <Footer />
+        {/* Scroll To Top */}
+        <ScrollToTop />
+    </>
+);

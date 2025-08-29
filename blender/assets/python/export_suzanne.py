@@ -3,7 +3,8 @@ import os, bpy
 os.system('cls')
 
 bpy.ops.export_scene.gltf(
-    filepath=f"{os.path.dirname(os.path.dirname(bpy.path.abspath('//')))}\public\model_suzanne.glb",
+    # filepath=f"{os.path.dirname(os.path.dirname(bpy.path.abspath('//')))}\public\model_suzanne_dev.glb",
+    filepath=f"{os.path.dirname(bpy.data.filepath)}\\assets\\media\\model_suzanne_dev.glb",
     collection='Suzanne',
     use_selection=False,
     use_renderable=True,

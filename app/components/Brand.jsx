@@ -1,10 +1,13 @@
 'use client';
 
-import Link from './Link.jsx';
+import Link from './Link';
 import Image from 'next/image';
-import { orbitronSans } from '../layout.jsx';
 
-export default function Brand() {
+export default function Brand({
+    textSizeImage = 'size-10',
+    textSizeBody = 'text-2xl',
+    extraClasses
+}) {
     return (
         <Link
             isNavLink={false}
@@ -12,16 +15,16 @@ export default function Brand() {
             body={
                 <>
                     <Image
-                        className='size-10'
-                        src='/avatar.png'
-                        alt=''
-                        width='64'
-                        height='64'
+                        className={`${textSizeImage} brightness-125 saturate-75 dark:brightness-100 dark:saturate-100`}
+                        src='/global/avatar.png'
+                        alt='TN Logo'
+                        width={128}
+                        height={128}
                     />
                     TRUNG NGUYEN
                 </>
             }
-            extraClasses={`${orbitronSans.className} h-full whitespace-nowrap p-4 gap-2 text-2xl font-black`}
+            extraClasses={`justify-center font-['Orbitron'] h-full whitespace-nowrap p-4 gap-2 ${textSizeBody} font-black ${extraClasses}`}
         />
     );
 }

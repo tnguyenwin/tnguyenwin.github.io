@@ -1,22 +1,20 @@
 'use client';
 
-import { styleTemplates } from '../globals.jsx';
+import { styleTemplates } from '../globals';
 import { useState, useEffect } from 'react';
 
 export default function ScrollToTop() {
     const [mounted, setMounted] = useState(false);
-    const handleScroll = () => {
-        let classes = [];
-
-        classes =
+    const [shouldShow, setShouldShow] = useState(false);
+    const handleScroll = () =>
+        setShouldShow(
             document.body.scrollTop > 20 ||
-            document.documentElement.scrollTop > 20
-                ? ['scale-0', 'scale-100']
-                : ['scale-100', 'scale-0'];
+                document.documentElement.scrollTop > 20
+        );
+    const handleScrollToHash = hash => {
+        const ele = document.querySelector(hash);
 
-        document
-            .getElementById('buttonScrollToTop')
-            ?.classList.replace(classes[0], classes[1]);
+        ele ? ele.scrollIntoView({ behavior: 'smooth' }) : null;
     };
     const handleScrollToTop = () => {
         document.body.scroll({
@@ -43,19 +41,25 @@ export default function ScrollToTop() {
         return () => window.removeEventListener('scroll', handleScroll2);
     }, []);
 
+    useEffect(() => {
+        mounted && window.location.hash
+            ? handleScrollToHash(window.location.hash)
+            : null;
+    }, [mounted]);
+
     return !mounted ? null : (
         <button
-            id='buttonScrollToTop'
-            className={`${styleTemplates.button} fixed right-0 bottom-0 z-1 m-2 scale-0 cursor-pointer rounded-full p-4 duration-300 ease-in-out lg:m-8`}
-            onClick={handleScrollToTop}
-            type='button'>
+            className={`${shouldShow ? 'scale-100' : 'scale-0'} ${styleTemplates.buttonPrimary} fixed right-0 bottom-0 z-2 m-2 !w-auto scale-0 cursor-pointer rounded-full !p-3 transition duration-200 ease-in-out lg:!m-4 lg:!p-4`}
+            type='button'
+            onClick={handleScrollToTop}>
             <svg
+                className='size-[12px] lg:size-[16px]'
+                width='16px'
+                height='16px'
                 stroke='currentColor'
                 fill='currentColor'
                 strokeWidth='2'
                 viewBox='0 0 16 16'
-                height='16px'
-                width='16px'
                 xmlns='http://www.w3.org/2000/svg'>
                 <path
                     fillRule='evenodd'

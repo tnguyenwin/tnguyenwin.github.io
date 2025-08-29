@@ -2,10 +2,14 @@
 const nextConfig = {
     devIndicators: false,
     reactStrictMode: false,
-    transpilePackages: ['three'],
     output: 'export',
+    transpilePackages: ['three'],
     images: {
         unoptimized: true
+    },
+    experimental: {
+        workerThreads: false,
+        cpus: 1
     }
 };
 

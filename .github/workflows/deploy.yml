@@ -1,0 +1,42 @@
+name: Deploy to gh-pages
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup NodeJS
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '20.x'
+
+            - name: Install dependencies
+              run: yarn install
+
+            - name: Build application with retry on failure
+              run: |
+                  max_attempts=3
+                  count=1
+                  until yarn run build; do
+                    if [ $count -eq $max_attempts ]; then
+                      echo "Build failed after $count attempts."
+                      exit 1
+                    fi
+                    echo "Build failed. Retrying in 10 seconds... (Attempt $count of $max_attempts)"
+                    sleep 10
+                    count=$((count + 1))
+                  done
+
+            - name: Deploy application
+              uses: peaceiris/actions-gh-pages@v4
+              with:
+                  github_token: ${{ secrets.MY_TOKEN }}
+                  publish_dir: ./out
