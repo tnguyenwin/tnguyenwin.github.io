@@ -14,13 +14,13 @@ export default function Link({
     return (
         <li className='group relative h-full'>
             <a
-                className={`flex items-center ${isNavLink && !extraClasses ? styleTemplates.navlinkHover : ''} ${extraClasses}`}
+                className={`flex items-center transition-colors duration-200 ease-in-out ${isNavLink && !extraClasses ? styleTemplates.navlinkHover : ''} ${extraClasses}`}
                 href={href}
                 target={target}>
                 {body}
                 {isNavLink ? (
                     <div
-                        className={`absolute left-[50%] h-[2px] w-full origin-left -translate-x-1/2 scale-0 transition duration-200 ease-in-out group-hover:scale-100 ${line}`}></div>
+                        className={`absolute left-[50%] h-[2px] w-full origin-left -translate-x-1/2 scale-0 transition-transform duration-200 ease-in-out group-hover:scale-100 ${line}`}></div>
                 ) : (
                     ''
                 )}

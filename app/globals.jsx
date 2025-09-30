@@ -11,16 +11,14 @@ export const styleDefaults = {
     outlineColorHover:
         'focus-within:outline-[#959595]  dark:focus-within:outline-[#6a6a6a]',
     shadowColor: 'shadow-[#E8E8E8] dark:shadow-black',
-    button: 'lg:text-lg flex w-full items-center justify-center gap-1 lg:gap-2 rounded-[0.25vw] px-2 py-1 text-[10px] lg:m-0 lg:px-4 lg:py-2 font-medium lg:w-auto transition duration-200 ease-in-out border-2'
+    button: 'transition-colors duration-200 ease-in-out lg:text-lg flex w-full items-center justify-center gap-1 lg:gap-2 rounded-[0.25rem] px-2 py-1 text-[10px] lg:m-0 lg:px-4 lg:py-2 font-medium lg:w-auto border-2'
 };
 
 export const styleTemplates = {
     navlinkHover: `duration-200 ease-in-out ${styleDefaults.textColorSecondary} dark:hover:text-white hover:text-black`,
     buttonPrimary: `${styleDefaults.button} bg-black text-white dark:bg-white dark:text-black border-black dark:border-white hover:bg-[rgb(25%,25%,25%)] dark:hover:bg-[rgb(87.5%,87.5%,87.5%)] hover:border-hover:bg-[rgb(25%,25%,25%)] dark:hover:border-[rgb(87.5%,87.5%,87.5%)]`,
     buttonSecondary: `${styleDefaults.button} ${styleDefaults.borderColor} ${styleDefaults.backgroundColor} hover:bg-[rgb(93.75%,93.75%,93.75%)] dark:hover:bg-[rgb(12.5%,12.5%,12.5%)]`,
-    threeCanvas: `cursor-pointer group rounded-[8vw] lg:rounded-[2vw] border-16 border-transparent bg-[radial-gradient(at_50%_50%,_rgb(243,243,240)_50%,_rgb(255,255,255)_75%,_rgb(243,243,240)_100%)] dark:bg-[radial-gradient(at_50%_50%,_rgb(28,28,31)_50%,_rgb(15,15,19)_75%,_rgb(28,28,31)_100%)] shadow-lg ${styleDefaults.shadowColor} outline-2 dark:outline outline-[#E8E8E8] dark:outline-[#3c3c4c] w-full lg:w-auto flex items-center justify-center relative aspect-square`,
-    threeGradient:
-        'lg:rounded-[2vw] absolute top-1/2 left-1/2 -z-1 -translate-1/2 size-full'
+    threeCanvas: `size-[384px] cursor-pointer group rounded-[3rem] border-16 border-transparent bg-[radial-gradient(at_50%_50%,_rgb(243,243,240)_50%,_rgb(255,255,255)_75%,_rgb(243,243,240)_100%)] dark:bg-[radial-gradient(at_50%_50%,_rgb(28,28,31)_50%,_rgb(15,15,19)_75%,_rgb(28,28,31)_100%)] shadow-lg ${styleDefaults.shadowColor} outline-2 dark:outline outline-[#E8E8E8] dark:outline-[#3c3c4c] flex items-center justify-center relative aspect-square`
 };
 
 /*

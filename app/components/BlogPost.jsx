@@ -13,7 +13,7 @@ export default function BlogPostMain({ id, image, date, title, tags, body }) {
                 href={`/blog/post/${id}`}>
                 <div className='relative overflow-hidden rounded-t-[1rem]'>
                     <Image
-                        className='aspect-video w-full object-cover saturate-[75%] transition duration-200 ease-in-out group-hover:scale-50 group-hover:scale-[106.25%] group-hover:saturate-25 dark:saturate-[67.5%]'
+                        className='aspect-video h-[270px] w-full object-cover saturate-[75%] transition duration-200 ease-in-out group-hover:scale-50 group-hover:scale-[106.25%] group-hover:saturate-25 dark:saturate-[67.5%]'
                         src={image}
                         alt='Placeholder'
                         width='480'
@@ -104,10 +104,7 @@ export const BlogPostIndividual = ({ id, image, date, title, tags, body }) => (
                 href={`/blog/post/${id}`}>
                 {title}
             </a>
-            <p
-                className={`${styleDefaults.textColorSecondary} w-[256px] truncate lg:w-auto`}>
-                {body}
-            </p>
+            <p className={`${styleDefaults.textColorSecondary}`}>{body}</p>
         </div>
     </div>
 );

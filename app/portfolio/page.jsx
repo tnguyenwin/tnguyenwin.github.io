@@ -5,44 +5,12 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import SectionGeneric, { Row } from '../components/Section';
+import PortfolioTab from '../components/PortfolioTab';
+import PortfolioLink from '../components/PortfolioLink';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 
 export default function Portfolio() {
-    const Button = ({ isPrimary, href }) => {
-        return (
-            <a
-                className={`${isPrimary ? styleTemplates.buttonPrimary : styleTemplates.buttonSecondary}`}
-                href={href}>
-                {isPrimary ? (
-                    <svg
-                        className='size-[10px] lg:size-[20px]'
-                        height='20px'
-                        width='20px'
-                        stroke='currentColor'
-                        fill='currentColor'
-                        strokeWidth='0'
-                        viewBox='0 0 512 512'
-                        xmlns='http://www.w3.org/2000/svg'>
-                        <path d='M371.7 238l-176-107c-15.8-8.8-35.7 2.5-35.7 21v208c0 18.4 19.8 29.8 35.7 21l176-101c16.4-9.1 16.4-32.8 0-42zM504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256z'></path>
-                    </svg>
-                ) : (
-                    <svg
-                        className='size-[10px] lg:size-[20px]'
-                        width='20px'
-                        height='20px'
-                        stroke='currentColor'
-                        fill='currentColor'
-                        strokeWidth='0'
-                        viewBox='0 0 640 512'
-                        xmlns='http://www.w3.org/2000/svg'>
-                        <path d='M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z'></path>
-                    </svg>
-                )}
-                {isPrimary ? 'Online Demo' : 'Source Code'}
-            </a>
-        );
-    };
     const tabsData = [
         {
             category: 'Technology',
@@ -57,13 +25,13 @@ export default function Portfolio() {
                             body: 'Team website demo using ASP.NET, Tailwind CSS & SmarterASP.net.',
                             buttons: (
                                 <>
-                                    <Button
+                                    <PortfolioLink
                                         isPrimary={true}
                                         href={
                                             'https://projectdesign-001-site6.itempurl.com'
                                         }
                                     />
-                                    <Button
+                                    <PortfolioLink
                                         isPrimary={false}
                                         href={
                                             'https://github.com/wakadaiko/WakaDaikoApp'
@@ -79,19 +47,19 @@ export default function Portfolio() {
                     projectName: 'OCDLA',
                     projectsChildren: [
                         {
-                            title: 'OREGON CRIMINAL DEFENSE LAWYERS ASSOCIATION',
+                            title: 'CO-OP',
                             image: '/pages/portfolio/ocdla.png',
                             imageIsBright: true,
-                            body: 'Reader for the Oregon Revised Statutes website.',
+                            body: 'ORS Reader for the Oregon Revised Statutes website.',
                             buttons: (
                                 <>
-                                    <Button
+                                    <PortfolioLink
                                         isPrimary={true}
                                         href={
                                             'https://ocdla-hosting.github.io/toc'
                                         }
                                     />
-                                    <Button
+                                    <PortfolioLink
                                         href={
                                             'https://github.com/ocdla-hosting/ocdla-hosting.github.io'
                                         }
@@ -111,13 +79,13 @@ export default function Portfolio() {
                             body: 'Term website demo using React Native, Nativewind & GitHub REST API.',
                             buttons: (
                                 <>
-                                    <Button
+                                    <PortfolioLink
                                         isPrimary={true}
                                         href={
                                             'https://tnguyen-win.github.io/cs235m-term-project'
                                         }
                                     />
-                                    <Button
+                                    <PortfolioLink
                                         href={
                                             'https://github.com/tnguyen-win/cs235m-term-project'
                                         }
@@ -131,13 +99,13 @@ export default function Portfolio() {
                             body: 'Term website demo using Plain JavaScript, Bootstrap & GitHub REST API.',
                             buttons: (
                                 <>
-                                    <Button
+                                    <PortfolioLink
                                         isPrimary={true}
                                         href={
                                             'https://citstudent.lanecc.edu/~nguyent409/CS233JS/final/term-project'
                                         }
                                     />
-                                    <Button
+                                    <PortfolioLink
                                         href={
                                             'https://github.com/tnguyen-win/cs233js-term-project'
                                         }
@@ -152,18 +120,18 @@ export default function Portfolio() {
                     projectName: 'Blog Posts',
                     projectsChildren: [
                         {
-                            title: 'BLOG POSTS',
+                            title: 'REACT.JS',
                             image: '/pages/portfolio/blog_posts.jpg',
                             body: 'Term / labs website demo using React, JSON Server, Bootstrap, GitHub Pages & Vercel.',
                             buttons: (
                                 <>
-                                    <Button
+                                    <PortfolioLink
                                         isPrimary={true}
                                         href={
                                             'https://tnguyen-win.github.io/cs295r-07-blog-v3'
                                         }
                                     />
-                                    <Button
+                                    <PortfolioLink
                                         href={
                                             'https://github.com/tnguyen-win/cs295r-07-blog-v3'
                                         }
@@ -183,13 +151,13 @@ export default function Portfolio() {
                             body: 'Term website demo using ASP.NET, Tailwind CSS & SmarterASP.net.',
                             buttons: (
                                 <>
-                                    <Button
+                                    <PortfolioLink
                                         isPrimary={true}
                                         href={
                                             'https://projectdesign-001-site4.itempurl.com'
                                         }
                                     />
-                                    <Button
+                                    <PortfolioLink
                                         href={
                                             'https://github.com/tnguyen-win/TrungNguyen_CS296N_TermProject'
                                         }
@@ -203,13 +171,13 @@ export default function Portfolio() {
                             body: 'Term website demo ASP.NET, Bootstrap & SmarterASP.net (previously Azure).',
                             buttons: (
                                 <>
-                                    <Button
+                                    <PortfolioLink
                                         isPrimary={true}
                                         href={
                                             'https://projectdesign-001-site2.itempurl.com'
                                         }
                                     />
-                                    <Button
+                                    <PortfolioLink
                                         href={
                                             'https://github.com/tnguyen-win/TrungNguyen_CS295N_TermProject'
                                         }
@@ -229,13 +197,13 @@ export default function Portfolio() {
                             body: 'Term website demo ASP.NET, Bootstrap & SmarterASP.net (previously Azure).',
                             buttons: (
                                 <>
-                                    <Button
+                                    <PortfolioLink
                                         isPrimary={true}
                                         href={
                                             'https://projectdesign-001-site3.itempurl.com'
                                         }
                                     />
-                                    <Button
+                                    <PortfolioLink
                                         href={
                                             'https://github.com/tnguyen-win/TrungNguyen_CS296N_Labs'
                                         }
@@ -249,13 +217,13 @@ export default function Portfolio() {
                             body: 'Labs website demo using ASP.NET, Bootstrap & SmarterASP.net (previously Azure).',
                             buttons: (
                                 <>
-                                    <Button
+                                    <PortfolioLink
                                         isPrimary={true}
                                         href={
                                             'https://projectdesign-001-site1.itempurl.com'
                                         }
                                     />
-                                    <Button
+                                    <PortfolioLink
                                         href={
                                             'https://github.com/tnguyen-win/TrungNguyen_CS295N_Labs'
                                         }
@@ -280,77 +248,29 @@ export default function Portfolio() {
                             body: 'Presentation slide of top ten Fortune 500 companies.'
                         }
                     ]
-                },
-                // Mars Weather Forecast
-                {
-                    projectName: 'Mars Weather Forecast',
-                    projectsChildren: [
-                        {
-                            title: 'MARS WEATHER FORECAST',
-                            image: '/pages/portfolio/excel_mars_forecast.jpg',
-                            body: 'Presentation slide of a weather report for Mars.'
-                        }
-                    ]
                 }
             ]
         }
     ];
     const [selectedTabCategory, setSelectedTabCategory] =
         useState('Technology');
-    const [selectedTabItem, setSelectedTabItems] = useState(0);
-    const Tab = ({ id, isCategory, title }) => {
-        const handleTab = () => {
-            isCategory
-                ? (() => {
-                      setSelectedTabCategory(title);
-                      setSelectedTabItems(0);
-                  })()
-                : setSelectedTabItems(id);
-
-            const tabData = JSON.stringify({
-                category: isCategory ? title : selectedTabCategory,
-                item: isCategory ? 0 : id
-            });
-
-            sessionStorage.setItem('portfolio_tabs', tabData);
-        };
-
-        useEffect(() => {
-            const tabSession = sessionStorage.getItem('portfolio_tabs');
-
-            tabSession
-                ? (() => {
-                      const { category, item } = JSON.parse(tabSession);
-
-                      setSelectedTabCategory(category);
-                      setSelectedTabItems(Number(item));
-                  })()
-                : null;
-        }, []);
-
-        return (
-            <li
-                key={id}
-                className={`${isCategory ? 'lg:p-4 lg:pe-0' : 'lg:p-4 lg:pb-0'}`}>
-                <button
-                    className={`flex !w-full gap-2 whitespace-nowrap ${
-                        isCategory
-                            ? title === selectedTabCategory
-                                ? styleTemplates.buttonPrimary
-                                : styleTemplates.buttonSecondary
-                            : id === selectedTabItem
-                              ? styleTemplates.buttonPrimary
-                              : styleTemplates.buttonSecondary
-                    } cursor-pointer`}
-                    onClick={handleTab}>
-                    {title}
-                </button>
-            </li>
-        );
-    };
+    const [selectedTabItem, setSelectedTabItem] = useState(0);
     const projectsChildren = tabsData.find(
         tab => tab.category === selectedTabCategory
     )?.projectsParent[selectedTabItem].projectsChildren;
+
+    useEffect(() => {
+        const tabSession = sessionStorage.getItem('portfolio_tabs');
+
+        tabSession
+            ? (() => {
+                  const { category, item } = JSON.parse(tabSession);
+
+                  setSelectedTabCategory(category);
+                  setSelectedTabItem(Number(item));
+              })()
+            : null;
+    }, []);
 
     return (
         <>
@@ -362,40 +282,55 @@ export default function Portfolio() {
                     extraClasses='flex-col !gap-8 !justify-start !items-center lg:!items-start lg:!justify-start'
                     hasViewportHeight={false}>
                     <Row
-                        extraClasses={`!${styleDefaults.backgroundColor} lg:gap-4 flex-col lg:flex-row size-full flex`}>
-                        {/* Tabs - Top/Left */}
+                        extraClasses={`${styleDefaults.backgroundColor} gap-4 flex-col lg:flex-row size-full flex`}>
+                        {/* Tabs - Categories */}
                         <ul
-                            className={`${styleDefaults.backgroundColor} gap-2 shadow-md lg:gap-0 dark:shadow-lg ${styleDefaults.shadowColor} flex w-full flex-col flex-wrap rounded-[0.5vw] lg:w-max lg:border [&>*:nth-last-child(2)]:pb-4 ${styleDefaults.borderColor} `}>
-                            {tabsData
-                                .find(
-                                    tab => tab.category === selectedTabCategory
-                                )
-                                .projectsParent.map((t, i) => (
-                                    <Tab
-                                        key={i}
-                                        id={i}
-                                        title={t.projectName}
-                                    />
-                                ))}
+                            className={`${styleDefaults.backgroundColor} p-4 shadow-md not-last:gap-2 lg:not-last:gap-4 dark:shadow-lg ${styleDefaults.shadowColor} flex flex-col flex-wrap rounded-[0.5rem] border lg:w-max ${styleDefaults.borderColor}`}>
+                            {tabsData.map((t, i) => (
+                                <PortfolioTab
+                                    key={i}
+                                    id={i}
+                                    isCategory
+                                    title={t.category}
+                                    selectedTabCategory={selectedTabCategory}
+                                    setSelectedTabCategory={
+                                        setSelectedTabCategory
+                                    }
+                                    selectedTabItem={selectedTabItem}
+                                    setSelectedTabItem={setSelectedTabItem}
+                                />
+                            ))}
                             <li
-                                className={`lg:border-t ${styleDefaults.borderColor}`}></li>
+                                className={`hidden lg:-mx-4 lg:block lg:border-t ${styleDefaults.borderColor}`}></li>
                         </ul>
-                        <div className='flex w-full flex-col gap-4'>
-                            {/* Tabs - Top/Right */}
+                        <div className='flex flex-col gap-4'>
+                            {/* Tabs - Projects */}
                             <ul
-                                className={`${styleDefaults.backgroundColor} gap-2 shadow-md lg:gap-0 dark:shadow-lg ${styleDefaults.shadowColor} ${styleDefaults.borderColor} flex w-full flex-col flex-wrap lg:flex-row lg:rounded-[0.5vw] lg:border [&>*:nth-last-child(1)]:pe-4`}>
-                                {tabsData.map((t, i) => (
-                                    <Tab
-                                        key={i}
-                                        id={i}
-                                        isCategory
-                                        title={t.category}
-                                    />
-                                ))}
-                                <li
-                                    className={`lg:border-e ${styleDefaults.borderColor}`}></li>
+                                className={`${styleDefaults.backgroundColor} shadow-md not-last:gap-2 lg:not-last:gap-4 dark:shadow-lg ${styleDefaults.shadowColor} ${styleDefaults.borderColor} grid size-full rounded-[0.5rem] border p-4 lg:grid-cols-3`}>
+                                {tabsData
+                                    .find(
+                                        tab =>
+                                            tab.category === selectedTabCategory
+                                    )
+                                    .projectsParent.map((t, i) => (
+                                        <PortfolioTab
+                                            key={i}
+                                            id={i}
+                                            title={t.projectName}
+                                            selectedTabCategory={
+                                                selectedTabCategory
+                                            }
+                                            setSelectedTabCategory={
+                                                setSelectedTabCategory
+                                            }
+                                            selectedTabItem={selectedTabItem}
+                                            setSelectedTabItem={
+                                                setSelectedTabItem
+                                            }
+                                        />
+                                    ))}
                             </ul>
-                            {/* Body - Bottom/Right */}
+                            {/* Project - Content */}
                             <div
                                 className={`grid size-full gap-4 lg:grid-cols-${
                                     projectsChildren.length
@@ -403,7 +338,7 @@ export default function Portfolio() {
                                 {projectsChildren.map((p, i) => (
                                     <div
                                         key={i}
-                                        className={`${styleDefaults.backgroundColor} shadow-md dark:shadow-lg ${styleDefaults.shadowColor} flex size-full flex-col gap-4 rounded-[2vw] border p-4 lg:gap-8 lg:rounded-[0.5vw] lg:p-8 ${styleDefaults.borderColor}`}>
+                                        className={`${styleDefaults.backgroundColor} shadow-md dark:shadow-lg ${styleDefaults.shadowColor} flex size-full flex-col gap-4 rounded-[0.5rem] border p-4 lg:gap-8 lg:p-8 ${styleDefaults.borderColor}`}>
                                         {/* Project - Title */}
                                         <h1
                                             className={`text-center text-2xl font-black ${projectsChildren.length === 1 ? 'lg:text-6xl' : 'lg:text-4xl'}`}>
@@ -411,7 +346,7 @@ export default function Portfolio() {
                                         </h1>
                                         {/* Project - Body */}
                                         <div
-                                            className={`text-sm ${styleDefaults.textColorSecondary} flex size-full items-center justify-center text-center ${projectsChildren.length === 1 ? 'lg:text-xl' : 'lg:text-lg'}`}>
+                                            className={`text-sm ${styleDefaults.textColorSecondary} flex items-center justify-center text-center ${projectsChildren.length === 1 ? 'lg:text-xl' : 'lg:text-lg'}`}>
                                             <span className='lg:w-2/3'>
                                                 {p.body}
                                             </span>
@@ -419,19 +354,19 @@ export default function Portfolio() {
                                         {/* Project - Buttons */}
                                         {p.buttons ? (
                                             <div
-                                                className={`mt-2 flex w-full flex-col justify-center gap-2 lg:mx-0 lg:flex-row lg:gap-4 ${styleDefaults.backgroundColor}`}>
+                                                className={`mt-2 flex w-full flex-col flex-wrap justify-center gap-2 lg:mx-0 lg:flex-row lg:gap-4 ${styleDefaults.backgroundColor}`}>
                                                 {p.buttons}
                                             </div>
                                         ) : null}
                                         {/* Project - Image */}
                                         <a
-                                            className={`group !aspect-auto !border-0 lg:!border-8 ${styleTemplates.threeCanvas} !rounded-[2vw] lg:!rounded-[0.5vw]`}
+                                            className={`group !aspect-auto !border-0 lg:!border-8 ${styleTemplates.threeCanvas} !size-full lg:!rounded-[0.5rem]`}
                                             href={p.image}
                                             target='_blank'>
                                             <div
                                                 className={`relative overflow-hidden lg:p-8`}>
                                                 <Image
-                                                    className='aspect-video w-full rounded-[1vw] object-cover transition duration-200 ease-in-out group-hover:blur-lg group-hover:saturate-25 lg:rounded-[0.25vw]'
+                                                    className='aspect-video w-full object-cover transition duration-400 ease-in-out group-hover:blur-lg group-hover:saturate-25 lg:rounded-[0.5rem]'
                                                     src={p.image}
                                                     alt='Portfolio Image'
                                                     width='1024'
@@ -439,7 +374,7 @@ export default function Portfolio() {
                                                     priority
                                                 />
                                                 <svg
-                                                    className={`absolute top-1/2 left-1/2 -translate-1/2 opacity-0 transition duration-400 ease-in-out group-hover:opacity-100 ${p.imageIsBright ? 'text-black' : 'text-white'}`}
+                                                    className={`absolute top-1/2 left-1/2 -translate-1/2 opacity-0 transition-opacity duration-400 ease-in-out group-hover:opacity-100 ${p.imageIsBright ? 'text-black' : 'text-white'}`}
                                                     stroke='currentColor'
                                                     fill='currentColor'
                                                     strokeWidth='16'

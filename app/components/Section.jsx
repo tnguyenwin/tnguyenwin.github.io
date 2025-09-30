@@ -1,7 +1,6 @@
 'use client';
 
 import { useRef, useState, useEffect } from 'react';
-import Image from 'next/image';
 import { styleTemplates } from '../globals';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -41,11 +40,11 @@ export default function SectionGeneric({
     return !mounted && refSection.current ? null : (
         <section
             id={id}
-            className={`relative p-4 transition duration-1000 ease-in-out ${pageInit ? 'opacity-100' : 'opacity-0'}`}>
-            <div className='absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.05)_1px,transparent_1px)] bg-[size:48px_48px] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)]'></div>
+            className={`relative p-4 transition-opacity duration-1000 ease-in-out ${pageInit ? 'opacity-100' : 'opacity-0'}`}>
+            <div className='absolute inset-0 bg-[linear-gradient(to_right,rgba(232,232,232,0.75)_1px,transparent_1px),linear-gradient(to_bottom,rgba(232,232,232,0.75)_1px,transparent_1px)] bg-[size:48px_48px] dark:bg-[linear-gradient(to_right,rgba(46,46,46,0.5)_1px,transparent_1px),linear-gradient(to_bottom,rgba(46,46,46,0.5)_1px,transparent_1px)]'></div>
             <div
                 ref={refSection}
-                className={`relative container mx-auto flex items-center justify-center ${!hasViewportHeight ? 'lg:min-h-[calc((100vh-109px)*var(--base-zoom))]' : ''} lg:gap-32 ${extraClasses || ''} lg:flex-row`}>
+                className={`relative container mx-auto flex items-center justify-center ${!hasViewportHeight ? 'lg:min-h-[calc((100vh-101px)*var(--base-zoom))]' : ''} lg:gap-32 ${extraClasses || ''} lg:flex-row`}>
                 {children}
             </div>
         </section>

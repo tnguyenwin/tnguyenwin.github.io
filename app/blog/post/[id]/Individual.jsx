@@ -14,7 +14,7 @@ export default async function ClientPage({ id }) {
     return (
         <>
             <Navbar />
-            <div className='p-4'>
+            <div className='container mx-auto p-4'>
                 <ul className='flex items-center'>
                     <Link
                         href={`/`}
@@ -37,7 +37,7 @@ export default async function ClientPage({ id }) {
                 </ul>
             </div>
             <main>
-                <SectionGeneric extraClasses='p-4 lg:p-16 items-start justify-start h-auto lg:h-auto'>
+                <SectionGeneric extraClasses='items-start justify-start h-auto lg:h-auto'>
                     {/* <Row extraClasses='flex flex-col size-full'> */}
                     <BlogPostIndividual
                         key={post.id}

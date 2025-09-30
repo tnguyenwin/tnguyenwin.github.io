@@ -23,13 +23,16 @@ export default function Home() {
                     hasViewportHeight={false}>
                     <Row extraClasses='flex w-full lg:w-auto flex-col gap-1 items-center justify-center mt-8 mb-4 lg:m-0'>
                         {/* Profile Image */}
-                        <Image
-                            className={`mb-3 size-[192px] rounded-full border shadow-lg ${styleDefaults.shadowColor} ${styleDefaults.borderColor} lg:size-[192px]`}
-                            src='/global/profile_2.png'
-                            alt='Picture of Myself'
-                            width='800'
-                            height='800'
-                        />
+                        <div
+                            className={`mb-3 !size-[240px] !rounded-full ${styleTemplates.threeCanvas} !cursor-default`}>
+                            <Image
+                                className='rounded-full p-2 contrast-[118.75%] saturate-[67.5%] dark:contrast-[112.5%] dark:saturate-75'
+                                src='/global/profile_2.png'
+                                alt='Picture of Myself'
+                                width='800'
+                                height='800'
+                            />
+                        </div>
                         {/* Text */}
                         <h2 className='text-lg font-black lg:text-2xl xl:text-3xl'>
                             DEVELOPER, ARTIST, DESIGNER
@@ -43,7 +46,7 @@ export default function Home() {
                         </p>
                         {/* Buttons */}
                         <div
-                            className={`flex w-full flex-col gap-2 lg:mx-0 lg:w-max lg:flex-row lg:gap-4 ${styleDefaults.backgroundColor} py-4`}>
+                            className={`flex w-full flex-col gap-2 sm:w-[384px] lg:mx-0 lg:flex-row lg:gap-4 ${styleDefaults.backgroundColor} py-4`}>
                             <a
                                 className={styleTemplates.buttonPrimary}
                                 href='/portfolio'>
@@ -77,17 +80,18 @@ export default function Home() {
                                 Provided Services
                             </a>
                         </div>
+                        {/* Name Pronunciation */}
                         <p
                             className={`mx-auto border-s-3 ps-3 text-[10px] lg:mx-0 lg:text-sm`}>
                             My name is pronounced&nbsp;&nbsp;&nbsp;→
                             &nbsp;&nbsp;Troong Win
                         </p>
                         {/* Social  Links */}
-                        <ul className='mt-2 mb-4 flex items-center gap-2'>
+                        <ul className='mt-2 flex items-center gap-2'>
                             {/* Email */}
                             <Link
                                 isNavLink={false}
-                                href='mailto:wip.abc@gmail.com'
+                                href='mailto:tnguyen.workspace@gmail.com'
                                 body={
                                     <svg
                                         width='28px'
@@ -150,33 +154,31 @@ export default function Home() {
                     extraClasses='flex-col'
                     hasViewportHeight={false}>
                     <Row extraClasses={styleTemplates.threeCanvas}>
-                        <div className='size-full lg:size-[calc(384px)]'>
+                        <div className='flex items-center lg:size-[calc(384px)]'>
                             <Image
-                                className='size-full rounded-[16vw] p-8 saturate-[87.5%] lg:rounded-[3vw] dark:saturate-[75%]'
-                                src='/global/profile_1.jpg'
+                                className='rounded-[4rem] p-8 brightness-[112.5%] saturate-[67.5%] dark:brightness-100 dark:saturate-75'
+                                src='/global/profile_1.png'
                                 alt='Picture of Myself'
-                                width='384'
-                                height='384'
+                                width='800'
+                                height='800'
                             />
                         </div>
                         <Credits
                             credits={[
-                                'transition bottom-[-14px] lg:bottom-[-16px] lg:scale-x-0 group-hover:scale-x-100',
+                                'transition-transform duration-200 ease-in-out bottom-[-12px] lg:bottom-[-16px] lg:scale-x-0 group-hover:scale-x-100',
                                 <>
                                     <p
-                                        className={`${styleDefaults.textColorSecondary} mx-auto ps-2 pt-2 text-[10px] lg:mx-0 lg:text-sm`}>
-                                        <span className='font-bold'>
-                                            CREDITS:
-                                        </span>
-                                        &nbsp; Picture Taken of Myself
+                                        className={`${styleDefaults.textColor} mx-auto ps-2 pt-2 font-['Geist_Mono'] text-[10px] lg:mx-0 lg:text-sm`}>
+                                        <span className='font-bold'>INFO:</span>
+                                        &nbsp;Picture of Myself
                                     </p>
                                 </>
                             ]}
                         />
                     </Row>
                     <Row
-                        extraClasses={`flex flex-col items-start justify-center gap-4 text-sm font-medium lg:text-2xl w-full lg:w-auto px-4 py-8`}>
-                        <ul className='flex flex-col'>
+                        extraClasses={`flex flex-col items-start justify-center gap-4 text-sm font-medium lg:text-2xl w-full lg:w-auto pt-8 lg:p-0`}>
+                        <ul className='mx-auto flex flex-col'>
                             <li className='text-4xl font-black whitespace-nowrap lg:text-7xl'>
                                 ABOUT ME
                             </li>
@@ -248,8 +250,8 @@ export default function Home() {
                     extraClasses='flex-col-reverse lg:flex-col'
                     hasViewportHeight={false}>
                     <Row
-                        extraClasses={`flex flex-col justify-center gap-4 w-full lg:w-auto py-8`}>
-                        <div className='flex flex-col px-4 lg:p-0'>
+                        extraClasses={`flex flex-col justify-center gap-4 w-full lg:w-auto pt-8 lg:p-0`}>
+                        <div className='mx-auto flex flex-col px-4 lg:p-0'>
                             <h1 className='mb-2 text-4xl font-black lg:text-7xl'>
                                 SERVICES
                             </h1>
@@ -271,7 +273,7 @@ export default function Home() {
                                             Hybrid
                                         </li>
                                         <li>
-                                            Website Builder-only, Code-only, or
+                                            Website Builder-only, Code-only or
                                             Hybrid
                                         </li>
                                     </ul>
@@ -298,7 +300,7 @@ export default function Home() {
                                 </li>
                             </ul>
                         </div>
-                        <ul className='mt-2 flex w-full flex-col gap-2 whitespace-nowrap lg:mx-0 lg:flex-row lg:gap-4'>
+                        <ul className='mx-auto mt-2 flex w-full flex-col gap-2 whitespace-nowrap sm:w-[384px] lg:mx-0 lg:flex-row lg:gap-4'>
                             <li>
                                 <a
                                     className={styleTemplates.buttonPrimary}
@@ -339,17 +341,15 @@ export default function Home() {
                     </Row>
                     <Row extraClasses={`${styleTemplates.threeCanvas}`}>
                         <R3F
-                            extraClasses='saturate-75 brightness-125 dark:brightness-100 dark:saturate-100'
+                            extraClasses='brightness-125 dark:brightness-100'
                             path='./models/model_room_prod.glb'
                             credits={[
-                                'transition bottom-[-12px]  lg:bottom-[-16px] lg:scale-x-0 group-hover:scale-x-100',
+                                'transition-transform duration-200 ease-in-out bottom-[-8px] lg:bottom-[-20px] lg:scale-x-0 group-hover:scale-x-100',
                                 <>
                                     <p
-                                        className={`${styleDefaults.textColorSecondary} mx-auto border-t-2 ${styleDefaults.borderColor} ps-2 pt-2 text-[10px] lg:mx-0 lg:text-sm`}>
-                                        <span className='font-bold'>
-                                            CREDITS:
-                                        </span>
-                                        &nbsp; Basic Room Made w/ Blender by Me
+                                        className={`${styleDefaults.textColor} mx-auto ps-2 pt-2 font-['Geist_Mono'] text-[10px] lg:mx-0 lg:text-sm`}>
+                                        <span className='font-bold'>INFO:</span>
+                                        &nbsp;Basic Room Made w/ Blender
                                     </p>
                                 </>
                             ]}
@@ -364,18 +364,15 @@ export default function Home() {
                     <Row
                         extraClasses={`scale-x-[-1] ${styleTemplates.threeCanvas}`}>
                         <R3F
-                            extraClasses='saturate-75 dark:saturate-100'
+                            extraClasses='contrast-125 dark:contrast-100 saturate-75 dark:saturate-100'
                             path='./models/model_suzanne_prod.glb'
                             credits={[
-                                'bottom-[-12px]  lg:bottom-[-16px]  transition transition -scale-x-100 lg:-scale-x-0 group-hover:-scale-x-100',
+                                'bottom-[-8px] lg:bottom-[-20px] transition-transform duration-200 ease-in-out -scale-x-100 lg:-scale-x-0 group-hover:-scale-x-100',
                                 <>
                                     <p
-                                        className={`${styleDefaults.textColorSecondary} mx-auto border-t-2 ${styleDefaults.borderColor} ps-2 pt-2 text-[10px] lg:mx-0 lg:text-sm`}>
-                                        <span className='font-bold'>
-                                            CREDITS:
-                                        </span>
-                                        &nbsp; Masked Suzanne Made w/ Blender by
-                                        Me
+                                        className={`${styleDefaults.textColor} mx-auto ps-2 pt-2 font-['Geist_Mono'] text-[10px] lg:mx-0 lg:text-sm`}>
+                                        <span className='font-bold'>INFO:</span>
+                                        &nbsp;Masked Monkey Made w/ Blender
                                     </p>
                                 </>
                             ]}
@@ -383,7 +380,7 @@ export default function Home() {
                     </Row>
                     <Row
                         extraClasses={`flex flex-col justify-center gap-4 w-full lg:w-auto py-8`}>
-                        <div className='flex flex-col gap-2 px-4'>
+                        <div className='mx-auto flex flex-col gap-2'>
                             <h1 className='text-4xl font-black lg:text-7xl'>
                                 CONTACT
                             </h1>
@@ -395,11 +392,11 @@ export default function Home() {
                                 Reach out to me:
                             </p>
                         </div>
-                        <ul className='flex w-full flex-col gap-2 whitespace-nowrap lg:mx-0 lg:flex-row lg:gap-4'>
+                        <ul className='mx-auto flex w-full flex-col gap-2 whitespace-nowrap sm:w-[384px] lg:mx-0 lg:flex-row lg:gap-4'>
                             <li>
                                 <a
                                     className={styleTemplates.buttonPrimary}
-                                    href='mailto:wip.abc@gmail.com'>
+                                    href='mailto:tnguyen.workspace@gmail.com'>
                                     <svg
                                         className='size-[12px] lg:size-[24px]'
                                         width='24px'

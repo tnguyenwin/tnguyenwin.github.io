@@ -1,12 +1,14 @@
 ![README.md](/public/global/website.png)
 
-# INFORMATION
+# LIVE DEMO
+
+- https://tnguyen-win.github.io
+
+# DEVELOPMENT NOTES
 
 ### KNOWN BUGS
 
-- [GLOBAL] Page location is not remembered in development (works fine in production).
-- [MOBILE CSS] Rounded corners don't always work in mobile view. (SOLVED❔)
-- [MODERN CSS] Focus within pseudo-selector doesn't work on older browsers (possibly fixed). (SOLVED❔)
+- [DEVELOPMENT] Page scroll location is not remembered on refresh (possibly due to mounting).
 
 ### KNOWN REQUESTS
 
@@ -23,14 +25,21 @@
 - BLOG
     - Complete individual blog pages.
     - Use Jekyll for Blog page by using custom \_config.yml file in Blog directory (OR) make Blog page use Markdown instead of Database and make Showcase page use Database instead.
+- PORTFOLIO
+    - Add animation transition for tab toggling.
+    - Add custom icons per project.
+    - Add lengthier descriptions of each project.
+- SKILLS
+    - Reduce spacing around cells.
 - RESUME
     - Complete resume page.
 - MISC
+    - Add motion safe/reduced classes to compliment transition classes.
     - Convert responsive breakpoints to "md" instead of "lg".
     - Convert all appropriate event handlers into one file to prevent unnessary duplicate events.
     - Convert all text to CMS for language selector and technology showcasing.
     - Convert Draco libraries to JS imports instead of using public directory workaround.
 
-# ADDITIONALLY USED TECHNOLOGIES
+### OTHER USED TECHNOLOGIES
 
 - https://gltf.report

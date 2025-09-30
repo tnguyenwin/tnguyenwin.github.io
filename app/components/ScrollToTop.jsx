@@ -49,7 +49,7 @@ export default function ScrollToTop() {
 
     return !mounted ? null : (
         <button
-            className={`${shouldShow ? 'scale-100' : 'scale-0'} ${styleTemplates.buttonPrimary} fixed right-0 bottom-0 z-2 m-2 !w-auto scale-0 cursor-pointer rounded-full !p-3 transition duration-200 ease-in-out lg:!m-4 lg:!p-4`}
+            className={`${shouldShow ? 'scale-100' : 'scale-0'} ${styleTemplates.buttonPrimary} fixed right-0 bottom-0 z-2 m-2 !w-auto scale-0 cursor-pointer rounded-full !p-3 transition-transform duration-200 ease-in-out lg:!m-4 lg:!p-4`}
             type='button'
             onClick={handleScrollToTop}>
             <svg

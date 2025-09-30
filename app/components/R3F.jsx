@@ -10,7 +10,7 @@ import { styleDefaults } from '../globals';
 
 export const Credits = ({ credits }) => (
     <div
-        className={`${styleDefaults.textColorSecondary} group absolute transition ${credits[0]} left-1/2 -translate-1/2 gap-2 whitespace-nowrap duration-200 ease-in-out`}>
+        className={`${styleDefaults.textColorSecondary} group absolute transition-transform ${credits[0]} left-1/2 -translate-1/2 gap-2 whitespace-nowrap duration-200 ease-in-out`}>
         {credits[1]}
     </div>
 );

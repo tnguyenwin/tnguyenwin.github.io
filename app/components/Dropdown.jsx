@@ -37,7 +37,7 @@ export default function Dropdown({
                     <div className='relative flex items-center gap-2'>
                         {title}
                         <svg
-                            className='mt-[3px] hidden transition duration-200 ease-in-out group-hover:rotate-[-180deg] lg:block'
+                            className='mt-[3px] hidden transition-transform duration-200 ease-in-out group-hover:rotate-[-180deg] lg:block'
                             stroke='currentColor'
                             fill='currentColor'
                             strokeWidth='0'
@@ -49,7 +49,7 @@ export default function Dropdown({
                         </svg>
                         {/* Dropdown Items */}
                         <ul
-                            className={`invisible z-2 opacity-0 transition duration-200 ease-in-out lg:w-max lg:grid-cols-1 lg:group-hover:visible lg:group-hover:opacity-100 xl:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] ${styleDefaults.backgroundColor} ${styleDefaults.borderColor} absolute top-[calc(200%-4px)] left-[-1rem] flex gap-4 border p-4 text-white shadow-xs dark:shadow-md ${styleDefaults.shadowColor}`}>
+                            className={`invisible z-2 opacity-0 transition-opacity duration-200 ease-in-out lg:w-max lg:grid-cols-1 lg:group-hover:visible lg:group-hover:opacity-100 xl:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] ${styleDefaults.backgroundColor} ${styleDefaults.borderColor} absolute top-[calc(200%-4px)] left-[-1rem] flex gap-4 rounded-b-[0.5rem] border p-4 text-white shadow-xs dark:shadow-md ${styleDefaults.shadowColor}`}>
                             {itemsDesktop.map((item, id) => (
                                 <li
                                     key={id}
@@ -65,11 +65,12 @@ export default function Dropdown({
                                                         {item.title}
                                                     </div>
                                                     <div
-                                                        className={`text-2xl transition duration-200 ease-in-out group-hover${href}:translate-x-1`}>
+                                                        className={`text-2xl transition-transform duration-200 ease-in-out group-hover${href}:translate-x-2`}>
                                                         →
                                                     </div>
                                                 </div>
-                                                <div className='text-[rgb(61.25%,61.25%,61.25%)]'>
+                                                <div
+                                                    className={`${styleDefaults.textColorSecondary} transition-colors duration-200 ease-in-out group-hover${href}:text-black dark:group-hover${href}:text-white`}>
                                                     {item.body}
                                                 </div>
                                             </div>
@@ -83,7 +84,7 @@ export default function Dropdown({
                     </div>
                 </button>
                 <div
-                    className={`absolute left-[50%] h-[2px] w-full origin-left -translate-x-1/2 scale-0 transition duration-200 ease-in-out peer-hover:scale-100 ${line}`}></div>
+                    className={`absolute left-[50%] h-[2px] w-full origin-left -translate-x-1/2 scale-0 transition-transform duration-200 ease-in-out peer-hover:scale-100 ${line}`}></div>
             </li>
         </>
     );

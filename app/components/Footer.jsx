@@ -46,7 +46,7 @@ export default function Footer() {
                                         {/* Email */}
                                         <Link
                                             isNavLink={false}
-                                            href='mailto:wip.abc@gmail.com'
+                                            href='mailto:tnguyen.workspace@gmail.com'
                                             body={
                                                 <svg
                                                     width='16px'
@@ -156,6 +156,12 @@ export default function Footer() {
                         <li className='-mt-2 h-full px-1 py-2 font-bold'>
                             Sitemap
                         </li>
+                        <Link
+                            isNavLink
+                            href='/'
+                            body='Home'
+                            extraClasses={`h-full px-1 py-2 -mt-2 ${styleTemplates.navlinkHover}`}
+                        />
                         <Link
                             isNavLink
                             href='/portfolio'

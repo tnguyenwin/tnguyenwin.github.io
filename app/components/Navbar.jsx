@@ -2,13 +2,12 @@
 
 import { useTheme } from 'next-themes';
 import { styleDefaults, styleTemplates } from '../globals';
-import { useRef, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Brand from './Brand';
 import Link from './Link';
 import Dropdown from './Dropdown';
 
 export default function Navbar() {
-    const refMask = useRef(null);
     const [mounted, setMounted] = useState(false);
     const { theme, setTheme } = useTheme();
     const [isMobile, setIsMobile] = useState(false);
@@ -75,7 +74,7 @@ export default function Navbar() {
                                     <div className='mx-3'>
                                         View latest post from Trung Nguyen
                                     </div>
-                                    <div className='mb-[4px] hidden text-lg transition group-hover:translate-x-1 lg:block'>
+                                    <div className='mb-[4px] hidden text-lg transition-transform duration-200 ease-in-out group-hover:translate-x-1 lg:block'>
                                         →
                                     </div>
                                 </>
@@ -84,7 +83,7 @@ export default function Navbar() {
                         />
                     </ul>
                     {/* <button
-                        className={`absolute top-[-4px] right-[4px] flex cursor-pointer items-center justify-center bg-red-600 p-2 transition duration-200 ease-in-out`}>
+                        className={`absolute top-[-4px] right-[4px] flex cursor-pointer items-center justify-center bg-red-600 p-2`}>
                         <svg
                             className='size-[12px] lg:size-[16px]'
                             stroke='currentColor'
@@ -117,7 +116,7 @@ export default function Navbar() {
                                     onClick={handleToggleMobileMenu}>
                                     {/* Open */}
                                     <svg
-                                        className={`${mobileCollapsed ? 'scale-100' : 'scale-0'} absolute top-[50%] left-[50%] size-[24px] -translate-1/2 transition duration-200 ease-in-out`}
+                                        className={`${mobileCollapsed ? 'scale-100' : 'scale-0'} absolute top-[50%] left-[50%] size-[24px] -translate-1/2 transition-transform duration-200 ease-in-out`}
                                         stroke='currentColor'
                                         fill='currentColor'
                                         strokeWidth='0'
@@ -134,7 +133,7 @@ export default function Navbar() {
                                     </svg>
                                     {/* Close */}
                                     <svg
-                                        className={`${mobileCollapsed ? 'scale-0' : 'scale-100'} absolute top-[50%] left-[50%] size-[20px] -translate-1/2 transition duration-200 ease-in-out`}
+                                        className={`${mobileCollapsed ? 'scale-0' : 'scale-100'} absolute top-[50%] left-[50%] size-[20px] -translate-1/2 transition-transform duration-200 ease-in-out`}
                                         stroke='currentColor'
                                         fill='currentColor'
                                         strokeWidth='0'
@@ -171,7 +170,7 @@ export default function Navbar() {
                                     {
                                         icon: (
                                             <svg
-                                                className={`dark:group-hover/portfolio/text-black rounded-lg border-2 border-black bg-black p-4 text-white transition duration-200 ease-in-out group-hover/portfolio:bg-transparent group-hover/portfolio:text-black dark:border-white dark:bg-white dark:text-black dark:group-hover/portfolio:text-white`}
+                                                className={`rounded-lg border-2 bg-transparent p-4 transition-colors duration-200 ease-in-out ${styleDefaults.borderColor} group-hover/portfolio:border-black dark:group-hover/portfolio:border-white`}
                                                 width='64px'
                                                 height='64px'
                                                 viewBox='0 0 512 512'
@@ -195,7 +194,7 @@ export default function Navbar() {
                                     {
                                         icon: (
                                             <svg
-                                                className={`dark:group-hover/portfolio/text-black rounded-lg border-2 border-black bg-black p-4 text-white transition duration-200 ease-in-out group-hover/portfolio:bg-transparent group-hover/portfolio:text-black dark:border-white dark:bg-white dark:text-black dark:group-hover/portfolio:text-white`}
+                                                className={`rounded-lg border-2 bg-transparent p-4 transition-colors duration-200 ease-in-out ${styleDefaults.borderColor} group-hover/portfolio:border-black dark:group-hover/portfolio:border-white`}
                                                 width='64px'
                                                 height='64px'
                                                 viewBox='0 0 512 512'
@@ -214,7 +213,7 @@ export default function Navbar() {
                                     // {
                                     //     icon: (
                                     //         <svg
-                                    //             className={`dark:group-hover/portfolio/text-black rounded-lg border-2 border-black bg-black p-3 text-white group-hover/portfolio:bg-transparent group-hover/portfolio:text-black dark:border-white dark:bg-white dark:text-black dark:group-hover/portfolio:text-white`}
+                                    // className={`rounded-lg border-2 bg-transparent p-4 transition-colors duration-200 ease-in-out ${styleDefaults.borderColor} group-hover/portfolio:border-black dark:group-hover/portfolio:border-white`}
                                     //             width='64px'
                                     //             height='64px'
                                     //             viewBox='0 0 24 24'
@@ -317,9 +316,9 @@ export default function Navbar() {
                             className='flex h-full cursor-pointer items-center p-4 pe-2 lg:-me-2'
                             onClick={handleToggleTheme}>
                             <div
-                                className={`relative h-6 w-11 rounded-[4vw] shadow-xs dark:shadow-sm ${styleDefaults.shadowColor} border-2 border-[rgb(220,220,220)] bg-[rgb(243,243,240)] dark:border-[#2e2e2e] dark:bg-[rgb(28,28,31)]`}>
+                                className={`relative h-6 w-11 rounded-[1rem] shadow-xs dark:shadow-sm ${styleDefaults.shadowColor} border-2 border-[rgb(220,220,220)] bg-[rgb(243,243,240)] dark:border-[#2e2e2e] dark:bg-[rgb(28,28,31)]`}>
                                 <div
-                                    className={`${styleDefaults.textColor} absolute top-[0px] left-[0px] flex h-5 w-5 items-center justify-center rounded-[4vw] bg-white text-xs transition-transform dark:bg-[#0f0f13] ${
+                                    className={`${styleDefaults.textColor} absolute top-[0px] left-[0px] flex h-5 w-5 items-center justify-center rounded-[1rem] bg-white text-xs dark:bg-[#0f0f13] ${
                                         theme === 'dark' && 'translate-x-full'
                                     }`}>
                                     {theme === 'dark' ? (
@@ -394,7 +393,7 @@ export default function Navbar() {
                                             Contact
                                         </div>
                                     }
-                                    extraClasses={`${styleTemplates.buttonPrimary} !text-base lg:!text-lg !px-4 !py-2 lg:!px-2 lg:!py-1 !rounded-none lg:!rounded-[0.25vw]`}
+                                    extraClasses={`${styleTemplates.buttonPrimary} !text-base lg:!text-lg !px-4 !py-2 lg:!px-2 lg:!py-1 !rounded-none lg:!rounded-[0.25rem]`}
                                 />
                             </ul>
                         </li>
@@ -402,8 +401,7 @@ export default function Navbar() {
                 </nav>
             </header>
             <div
-                ref={refMask}
-                className={`${(isMobile && !mobileCollapsed) || !allDropdownsCollapsed.every(v => v === true) ? 'opacity-100 lg:pointer-events-auto' : 'pointer-events-none opacity-0'} absolute fixed top-0 left-0 z-1 size-full w-full bg-[rgba(255,255,255,0.75)] backdrop-blur-lg transition duration-200 ease-in-out dark:bg-[rgba(0,0,0,0.5)]`}
+                className={`${(isMobile && !mobileCollapsed) || !allDropdownsCollapsed.every(v => v === true) ? 'opacity-100 lg:pointer-events-auto' : 'pointer-events-none opacity-0'} fixed top-0 left-0 z-1 size-full bg-[rgba(255,255,255,0.75)] backdrop-blur-lg transition-opacity duration-200 ease-in-out dark:bg-[rgba(0,0,0,0.5)]`}
                 onClick={handleToggleMobileMenu}></div>
         </>
     );

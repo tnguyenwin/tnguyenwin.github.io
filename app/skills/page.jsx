@@ -1,9 +1,9 @@
 'use client';
 
-import { styleDefaults } from '../globals';
 import React from 'react';
 import Navbar from '../components/Navbar';
 import SectionGeneric, { Row } from '../components/Section';
+import SkillsCategory from '../components/SkillsCategory';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 
@@ -27,7 +27,7 @@ export default function Skills() {
         },
         {
             category: 'WEBSITE BUILDERS',
-            items: 'Wix--Framer--WordPress--Google Sites--Grapes.js',
+            items: 'Wix--Webflow--Framer--WordPress--Squarespace--Shopify--Google Sites--Canva Sites--Weebly--Grapes.js',
             subItems: {
                 0: 'Classic (editor)--Editor X (editor)--Studio (editor)--Codux (application)',
                 2: 'WordPress.org (self-host)--WordPress.com (cloud)--Elementor (plugin)--Gutenberg (plugin)',
@@ -129,39 +129,6 @@ export default function Skills() {
             items: 'AJAX--Scaffolding--Markdown--Pandoc--SEO'
         }
     ];
-    const SkillsCategory = ({ category, items, subItems }) => {
-        return category ? (
-            <div
-                id={category.toLowerCase().replace(' ', '-')}
-                className={`invisible m-auto flex size-max flex-col gap-2 [&:nth-child(odd)]:visible ${styleDefaults.borderColor} border ${styleDefaults.backgroundColor} shadow-md dark:shadow-lg ${styleDefaults.shadowColor} rounded-[1rem] p-4`}>
-                <h1 className='font-black lg:text-xl xl:text-2xl'>
-                    {category}
-                </h1>
-                <ul className={`flex list-inside list-disc flex-col gap-2`}>
-                    {items?.split('--').map((item, i1) => {
-                        const subList =
-                            subItems?.[i1.toString()]?.split('--') || [];
-
-                        return (
-                            <li key={i1}>
-                                {item}
-                                {subList && (
-                                    <ul
-                                        className={`${styleDefaults.textColorSecondary} ms-4 flex list-inside list-disc flex-col gap-2 [&>*:first-child]:mt-2`}>
-                                        {subList.map((subItem, i2) => (
-                                            <li key={i2}>{subItem}</li>
-                                        ))}
-                                    </ul>
-                                )}
-                            </li>
-                        );
-                    })}
-                </ul>
-            </div>
-        ) : (
-            <div></div>
-        );
-    };
 
     return (
         <>
@@ -170,10 +137,10 @@ export default function Skills() {
             {/* Main */}
             <main>
                 <SectionGeneric
-                    extraClasses='p-4 lg:p-16'
+                    extraClasses='lg:py-16'
                     hasViewportHeight={false}>
                     <Row extraClasses='flex flex-col gap-4 lg:gap-12 items-center size-full'>
-                        <div className='m-4 flex items-center gap-4 text-sm lg:mt-4 lg:mb-8 lg:text-2xl'>
+                        <div className='m-4 flex items-center gap-4 lg:mt-4 lg:mb-8 lg:text-2xl'>
                             Total Listed Skills:
                             <span className='rounded-lg border border-green-400 bg-green-100 px-1 py-px text-green-600 dark:border-green-600 dark:bg-green-900 dark:text-green-300'>
                                 {skillsCategories.reduce(
