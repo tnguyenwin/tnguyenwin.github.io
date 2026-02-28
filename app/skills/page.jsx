@@ -11,32 +11,36 @@ export default function Skills() {
     const skillsCategories = [
         {
             category: 'LANGUAGES',
-            items: 'HTML & CSS--JavaScript & Node.js--C#--Python--SQL--Batch, PowerShell & Bash--WebAssembly--GLSL--PHP--Java'
-        },
-        {
-            category: '3D RENDERING',
-            items: 'Blender--Three.js--Babylon.js--PlayCanvas--Godot Engine'
-        },
-        {
-            category: 'ASSET CREATION',
-            items: 'Blender--Figma--GIMP--Inkscape--Canva--Adobe Illustrator--Adobe Photoshop--Visual Paradigm Online--Microsoft Paint--UMLetino'
-        },
-        {
-            category: 'HOSTING PROVIDERS',
-            items: 'GitHub Pages--SmarterASP.net--Microsoft Azure--Vercel--Apache HTTP Server / XAMPP--Self-Hosting'
+            items: 'HTML--CSS--JS & Node.js--C#--Python--SQL--Batch, PowerShell & Bash--WASM--GLSL--PHP--Java'
         },
         {
             category: 'WEBSITE BUILDERS',
-            items: 'Wix--Webflow--Framer--WordPress--Squarespace--Shopify--Google Sites--Canva Sites--Weebly--Grapes.js',
+            items: 'Webflow--Framer--WordPress--Wix--Squarespace--Shopify--Google Sites--Canva Sites--Weebly--Grapes.js',
             subItems: {
-                0: 'Classic (editor)--Editor X (editor)--Studio (editor)--Codux (application)',
                 2: 'WordPress.org (self-host)--WordPress.com (cloud)--Elementor (plugin)--Gutenberg (plugin)',
+                3: 'Classic (editor)--Editor X (editor)--Studio (editor)--Blocks (editor)--Codux (application)',
                 4: 'Classic (editor)--Studio (editor)'
             }
         },
         {
+            category: 'HOSTING PROVIDERS',
+            items: 'GitHub Pages--Cloudflare Pages--SmarterASP.net--Microsoft Azure--Vercel--Apache HTTP Server / XAMPP--Self-Hosting'
+        },
+        {
+            category: 'WEBGL',
+            items: 'Three.js--Babylon.js--PlayCanvas--Unity--Godot Engine--WebGL'
+        },
+        {
+            category: 'ASSET CREATION',
+            items: 'Blender--Figma--GIMP--Inkscape--Canva--Adobe Illustrator--Adobe Photoshop--Lucidchart--Visual Paradigm Online--UMLetino--Microsoft Paint'
+        },
+        {
             category: 'IDE',
             items: 'Visual Studio Code--Visual Studio--GitHub Dev--Replit'
+        },
+        {
+            category: 'JS FRAMEWORKS',
+            items: 'React.js--Next.js--Create React App--React Native--Expo Go'
         },
         {
             category: 'CSS FRAMEWORKS',
@@ -44,13 +48,13 @@ export default function Skills() {
             subItems: { 0: 'Node--CDN', 1: 'Node--CDN', 2: 'CDN', 3: 'CDN' }
         },
         {
-            category: 'JS FRAMEWORKS',
-            items: 'React.js--Next.js--Create React App--React Native--Expo Go'
-        },
-        {
             category: 'C# FRAMEWORKS',
             items: '.NET',
             subItems: { 0: 'ASP.NET--EF Core--ADO.NET' }
+        },
+        {
+            category: 'DATABASE',
+            items: 'MySQL--MySQL Workbench--MSSQL--SSMS'
         },
         {
             category: 'API',
@@ -58,15 +62,11 @@ export default function Skills() {
         },
         {
             category: 'CYBERSECURITY',
-            items: 'Tampermonkey--ZAP--Apache JMeter--(etc.)'
+            items: 'Tampermonkey--BurpSuite--ZAP--Apache JMeter--Cheat Engine'
         },
         {
-            category: 'DATABASE',
-            items: 'MySQL--MySQL Workbench--MSSQL--SSMS'
-        },
-        {
-            category: 'VERSION CONTROL',
-            items: 'GitHub--Git--GitHub Desktop--Visual Studio Code--Visual Studio--GitHub Dev--GitLab'
+            category: 'GIT CLIENTS & UI',
+            items: 'Git--GitHub Desktop--Visual Studio Code--Visual Studio--GitHub Dev'
         },
         {
             category: 'DEVOPS & CI/CD',
@@ -86,31 +86,31 @@ export default function Skills() {
         },
         {
             category: 'FILE SHARING',
-            items: 'FileZilla--FTP & FTPS--SSH'
+            items: 'GitHub--FileZilla--FTP & FTPS--SSH--Web Deploy--Google Drive--GitLab'
+        },
+        {
+            category: 'DATA VISUALIZATION',
+            items: 'Microsoft Excel--Microsoft PowerBI--Google Sheets'
+        },
+        {
+            category: 'PRESENTATION',
+            items: 'Microsoft PowerPoint--Google Slides'
         },
         {
             category: 'WORD PROCESSORS',
             items: 'Microsoft Word--Google Docs--LibreOffice Writer'
         },
         {
-            category: 'SPREADSHEETS',
-            items: 'Microsoft Excel--Google Sheets'
-        },
-        {
-            category: 'PRESENTATIONS',
-            items: 'Microsoft PowerPoint--Google Slides'
-        },
-        {
             category: 'TEXT & MEDIA CONVERTORS',
-            items: 'FFmpeg--pandoc--ImageMagick--Ezgif'
+            items: 'FFmpeg--Pandoc--ImageMagick--Ezgif--PDFsam'
         },
         {
-            category: 'COLLABORATION',
-            items: 'Zoom--Google Meet--Slack--Discord'
+            category: 'VIDEO CONFERENCING',
+            items: 'Google Meet--Zoom--Slack--Discord'
         },
         {
             category: 'SCREEN CAPTURE',
-            items: 'Snipping Tool--OBS Studio--PowerPoint--Xbox Gamebar'
+            items: 'OBS Studio--Snipping Tool--PowerPoint--Xbox Gamebar'
         },
         {
             category: 'SOFT SKILLS',
@@ -126,7 +126,7 @@ export default function Skills() {
         },
         {
             category: 'OTHER SKILLS',
-            items: 'AJAX--Scaffolding--Markdown--Pandoc--SEO'
+            items: 'AJAX--Scaffolding--Markdown--SEO--GEO'
         }
     ];
 
@@ -153,7 +153,7 @@ export default function Skills() {
                                 )}
                             </span>
                         </div>
-                        <div className='grid size-full gap-4 lg:grid-cols-3'>
+                        <div className='grid gap-4 lg:grid-cols-3'>
                             {skillsCategories.map((item, i) => (
                                 <React.Fragment key={i}>
                                     <SkillsCategory

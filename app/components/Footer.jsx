@@ -40,7 +40,7 @@ export default function Footer() {
                         />
                         <li>
                             <ul className='flex items-center justify-center gap-2 px-2 lg:justify-start'>
-                                <li>Copyright &copy; 2025</li>
+                                <li>Copyright &copy; 2026</li>
                                 <li>
                                     <ul className='flex items-center gap-[0.25rem]'>
                                         {/* Email */}

@@ -1,11 +1,46 @@
 @import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
 
-noscript {
-    min-width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Geist;
+:root {
+    --pulse-opacity-start: 0.5;
+    --pulse-opacity-end: 1;
+}
+
+.dark {
+    --pulse-opacity-start: 0.75;
+    --pulse-opacity-end: 1;
+}
+
+/* @keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+} */
+
+@keyframes pulseCustom {
+    0%,
+    100% {
+        opacity: var(--pulse-opacity-start);
+    }
+    50% {
+        opacity: var(--pulse-opacity-end);
+    }
+}
+
+@keyframes typewriter {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 100%;
+    }
+    75% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
 }

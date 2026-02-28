@@ -58,9 +58,9 @@ export default function Navbar() {
 
     return !mounted ? null : (
         <>
-            {/* Navbar */}
+            {/* Nav */}
             <header
-                className={`sticky top-0 left-0 border-b shadow-sm dark:shadow-md ${styleDefaults.shadowColor} ${styleDefaults.borderColor} z-2 bg-inherit`}>
+                className={`sticky top-0 left-0 border-b bg-[rgba(255,255,255,0.5)] shadow-sm backdrop-blur-lg dark:bg-[rgba(15,15,19,0.5)] dark:shadow-md ${styleDefaults.shadowColor} ${styleDefaults.borderColor} z-2`}>
                 {/* Banner */}
                 <div className='relative'>
                     <ul>
@@ -101,6 +101,7 @@ export default function Navbar() {
                         </svg>
                     </button> */}
                 </div>
+                {/* Navbar */}
                 <nav className='container mx-auto flex flex-col justify-between lg:flex-row lg:items-center'>
                     {/* Nav - Left */}
                     <div className='flex w-full flex-col lg:h-[64px] lg:w-max lg:flex-row lg:items-center'>
@@ -255,7 +256,7 @@ export default function Navbar() {
                                 body={
                                     <>
                                         Blog
-                                        <span className='absolute top-1/4 left-[3.5rem] rounded-lg border border-green-400 bg-green-100 px-1 py-px text-[10px] text-green-600 lg:top-1/3 lg:left-7/8 dark:border-green-600 dark:bg-green-900 dark:text-green-300'>
+                                        <span className='absolute top-1/4 left-[3.5rem] animate-[pulseCustom_2s_ease-in-out_infinite] rounded-lg border border-green-400 bg-green-100 px-1 py-px text-[10px] text-green-600 lg:top-1/3 lg:left-7/8 dark:border-green-600 dark:bg-green-900 dark:text-green-300'>
                                             NEW
                                         </span>
                                     </>
@@ -400,6 +401,7 @@ export default function Navbar() {
                     </ul>
                 </nav>
             </header>
+            {/* Nav Mask */}
             <div
                 className={`${(isMobile && !mobileCollapsed) || !allDropdownsCollapsed.every(v => v === true) ? 'opacity-100 lg:pointer-events-auto' : 'pointer-events-none opacity-0'} fixed top-0 left-0 z-1 size-full bg-[rgba(255,255,255,0.75)] backdrop-blur-lg transition-opacity duration-200 ease-in-out dark:bg-[rgba(0,0,0,0.5)]`}
                 onClick={handleToggleMobileMenu}></div>

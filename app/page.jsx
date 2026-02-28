@@ -34,10 +34,15 @@ export default function Home() {
                             />
                         </div>
                         {/* Text */}
-                        <h2 className='text-lg font-black lg:text-2xl xl:text-3xl'>
+                        <h2
+                            data-text='DEVELOPER, ARTIST, DESIGNER'
+                            className={`${styleTemplates.effectTypewriter} text-lg font-black lg:text-2xl xl:text-3xl`}>
                             DEVELOPER, ARTIST, DESIGNER
                         </h2>
-                        <h1 className='text-4xl font-black lg:text-5xl xl:text-7xl'>
+                        <h1
+                            id='test'
+                            className={`${styleTemplates.effectMetal} text-4xl font-black lg:text-5xl xl:text-7xl`}
+                            data-text='TRUNG NGUYEN'>
                             TRUNG NGUYEN
                         </h1>
                         <p className='w-[calc(100vw-12rem)] text-center text-sm font-medium lg:text-lg xl:text-2xl'>
@@ -264,7 +269,7 @@ export default function Home() {
                                     <ul className='ms-4 flex list-inside list-disc flex-col gap-2'>
                                         <li>
                                             Web, Mobile, Desktop{' '}
-                                            <sup className='ms-2 list-none rounded-lg border border-green-400 bg-green-100 px-1 py-px text-[8px] text-green-600 lg:text-sm dark:border-green-600 dark:bg-green-900 dark:text-green-300'>
+                                            <sup className='ms-2 animate-[pulseCustom_2s_ease-in-out_infinite] list-none rounded-lg border border-green-400 bg-green-100 px-1 py-px text-[8px] text-green-600 lg:text-sm dark:border-green-600 dark:bg-green-900 dark:text-green-300'>
                                                 Including Websites
                                             </sup>
                                         </li>

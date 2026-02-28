@@ -12,15 +12,17 @@
 
 ### KNOWN REQUESTS
 
-- Allow mousewheel camera rotation for 3D models.
+    - Make pinned banner dismissible.
+    - Allow mousewheel camera rotation for 3D models.
+    - Add smooth theme toggle transition.
 
 ### TODO
 
 - HEADER
-    - Make pinned banner dismissible.
     - Implement dropdown menus for mobile navbar.
     - Complete breadcrumbs for non-home pages.
 - HOMEPAGE
+    - Add showcase and/or skills sections'.
     - Add mobile, touch-based visibility toggling for 3D model credits.
 - BLOG
     - Complete individual blog pages.
@@ -29,11 +31,11 @@
     - Add animation transition for tab toggling.
     - Add custom icons per project.
     - Add lengthier descriptions of each project.
-- SKILLS
-    - Reduce spacing around cells.
+    - Add first person demos (ThreeJS, BabylonJS, PlayCanvas, Godot, GDevelop, Defold, etc.).
 - RESUME
     - Complete resume page.
 - MISC
+    - Add more gradients to background.
     - Add motion safe/reduced classes to compliment transition classes.
     - Convert responsive breakpoints to "md" instead of "lg".
     - Convert all appropriate event handlers into one file to prevent unnessary duplicate events.

@@ -22,7 +22,7 @@ export default function Portfolio() {
                         {
                             title: 'CAPSTONE',
                             image: '/pages/portfolio/capstone.jpg',
-                            body: 'Team website demo using ASP.NET, Tailwind CSS & SmarterASP.net.',
+                            body: 'Two-term, team website demo using ASP.NET, Tailwind CSS & SmarterASP.net.',
                             buttons: (
                                 <>
                                     <PortfolioLink

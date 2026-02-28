@@ -49,7 +49,7 @@ export default function Dropdown({
                         </svg>
                         {/* Dropdown Items */}
                         <ul
-                            className={`invisible z-2 opacity-0 transition-opacity duration-200 ease-in-out lg:w-max lg:grid-cols-1 lg:group-hover:visible lg:group-hover:opacity-100 xl:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] ${styleDefaults.backgroundColor} ${styleDefaults.borderColor} absolute top-[calc(200%-4px)] left-[-1rem] flex gap-4 rounded-b-[0.5rem] border p-4 text-white shadow-xs dark:shadow-md ${styleDefaults.shadowColor}`}>
+                            className={`invisible z-2 bg-[rgba(255,255,255,0.75)] opacity-0 backdrop-blur-lg transition-opacity duration-200 ease-in-out lg:w-max lg:grid-cols-1 lg:group-hover:visible lg:group-hover:opacity-100 xl:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] dark:bg-[rgba(15,15,19,0.75)] ${styleDefaults.borderColor} absolute top-[calc(200%-4px)] left-[-1rem] flex gap-4 rounded-b-[0.5rem] border p-4 text-white shadow-xs dark:shadow-md ${styleDefaults.shadowColor}`}>
                             {itemsDesktop.map((item, id) => (
                                 <li
                                     key={id}
