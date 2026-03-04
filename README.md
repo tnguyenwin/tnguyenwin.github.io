@@ -2,7 +2,7 @@
 
 # LIVE DEMO
 
-- https://tnguyen-win.github.io
+- https://tnguyenwin.github.io
 
 # DEVELOPMENT NOTES
 

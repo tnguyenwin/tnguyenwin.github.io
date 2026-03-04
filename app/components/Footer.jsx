@@ -67,7 +67,7 @@ export default function Footer() {
                                         {/* LinkedIn */}
                                         <Link
                                             isNavLink={false}
-                                            href='https://linkedin.com/in/trung-nguyen-business'
+                                            href='https://linkedin.com/in/tnguyenwin'
                                             body={
                                                 <svg
                                                     stroke='currentColor'
@@ -85,7 +85,7 @@ export default function Footer() {
                                         {/* GitHub */}
                                         <Link
                                             isNavLink={false}
-                                            href='https://github.com/tnguyen-win'
+                                            href='https://github.com/tnguyenwin'
                                             body={
                                                 <svg
                                                     stroke='currentColor'
@@ -209,7 +209,7 @@ export default function Footer() {
                 <li className='font-bold'>Website Made With Next.js</li>
                 <Link
                     isNavLink
-                    href='https://github.com/tnguyen-win/tnguyen-win.github.io'
+                    href='https://github.com/tnguyenwin/tnguyenwin.github.io'
                     target='_blank'
                     body={
                         <>

@@ -82,12 +82,12 @@ export default function Portfolio() {
                                     <PortfolioLink
                                         isPrimary={true}
                                         href={
-                                            'https://tnguyen-win.github.io/cs235m-term-project'
+                                            'https://tnguyenwin.github.io/cs235m-term-project'
                                         }
                                     />
                                     <PortfolioLink
                                         href={
-                                            'https://github.com/tnguyen-win/cs235m-term-project'
+                                            'https://github.com/tnguyenwin/cs235m-term-project'
                                         }
                                     />
                                 </>
@@ -107,7 +107,7 @@ export default function Portfolio() {
                                     />
                                     <PortfolioLink
                                         href={
-                                            'https://github.com/tnguyen-win/cs233js-term-project'
+                                            'https://github.com/tnguyenwin/cs233js-term-project'
                                         }
                                     />
                                 </>
@@ -128,12 +128,12 @@ export default function Portfolio() {
                                     <PortfolioLink
                                         isPrimary={true}
                                         href={
-                                            'https://tnguyen-win.github.io/cs295r-07-blog-v3'
+                                            'https://tnguyenwin.github.io/cs295r-07-blog-v3'
                                         }
                                     />
                                     <PortfolioLink
                                         href={
-                                            'https://github.com/tnguyen-win/cs295r-07-blog-v3'
+                                            'https://github.com/tnguyenwin/cs295r-07-blog-v3'
                                         }
                                     />
                                 </>
@@ -159,7 +159,7 @@ export default function Portfolio() {
                                     />
                                     <PortfolioLink
                                         href={
-                                            'https://github.com/tnguyen-win/TrungNguyen_CS296N_TermProject'
+                                            'https://github.com/tnguyenwin/TrungNguyen_CS296N_TermProject'
                                         }
                                     />
                                 </>
@@ -179,7 +179,7 @@ export default function Portfolio() {
                                     />
                                     <PortfolioLink
                                         href={
-                                            'https://github.com/tnguyen-win/TrungNguyen_CS295N_TermProject'
+                                            'https://github.com/tnguyenwin/TrungNguyen_CS295N_TermProject'
                                         }
                                     />
                                 </>
@@ -205,7 +205,7 @@ export default function Portfolio() {
                                     />
                                     <PortfolioLink
                                         href={
-                                            'https://github.com/tnguyen-win/TrungNguyen_CS296N_Labs'
+                                            'https://github.com/tnguyenwin/TrungNguyen_CS296N_Labs'
                                         }
                                     />
                                 </>
@@ -225,7 +225,7 @@ export default function Portfolio() {
                                     />
                                     <PortfolioLink
                                         href={
-                                            'https://github.com/tnguyen-win/TrungNguyen_CS295N_Labs'
+                                            'https://github.com/tnguyenwin/TrungNguyen_CS295N_Labs'
                                         }
                                     />
                                 </>

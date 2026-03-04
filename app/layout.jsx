@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
             />
             <meta
                 property='og:image'
-                content='https://raw.githubusercontent.com/tnguyen-win/tnguyen-win.github.io/refs/heads/main/README.png'
+                content='https://raw.githubusercontent.com/tnguyenwin/tnguyenwin.github.io/refs/heads/main/README.png'
             />
             {/* Twitter */}
             <meta
@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
             />
             <meta
                 name='twitter:image'
-                content='https://raw.githubusercontent.com/tnguyen-win/tnguyen-win.github.io/refs/heads/main/website.png'
+                content='https://raw.githubusercontent.com/tnguyenwin/tnguyenwin.github.io/refs/heads/main/website.png'
             />
 
             <body

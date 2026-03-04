@@ -36,7 +36,7 @@ export default function Skills() {
         },
         {
             category: 'IDE',
-            items: 'Visual Studio Code--Visual Studio--GitHub Dev--Replit'
+            items: 'Visual Studio Code--Visual Studio--GitHub Dev--Replit--Android Studio'
         },
         {
             category: 'JS FRAMEWORKS',

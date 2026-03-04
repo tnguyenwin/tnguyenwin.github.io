@@ -117,7 +117,7 @@ export default function Home() {
                             {/* LinkedIn */}
                             <Link
                                 isNavLink={false}
-                                href='https://linkedin.com/in/trung-nguyen-business'
+                                href='https://linkedin.com/in/tnguyenwin'
                                 body={
                                     <svg
                                         stroke='currentColor'
@@ -135,7 +135,7 @@ export default function Home() {
                             {/* GitHub */}
                             <Link
                                 isNavLink={false}
-                                href='https://github.com/tnguyen-win'
+                                href='https://github.com/tnguyenwin'
                                 body={
                                     <svg
                                         stroke='currentColor'
@@ -422,7 +422,7 @@ export default function Home() {
                             <li>
                                 <a
                                     className={styleTemplates.buttonSecondary}
-                                    href='https://linkedin.com/in/trung-nguyen-business'
+                                    href='https://linkedin.com/in/tnguyenwin'
                                     target='_blank'>
                                     <svg
                                         className='size-[10px] lg:size-[20px]'
