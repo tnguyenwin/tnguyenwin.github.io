@@ -2,7 +2,8 @@
 
 # LIVE DEMO
 
-- https://tnguyenwin.github.io
+- (#1) https://tnguyenwin.pages.dev
+- (#2) https://tnguyenwin.github.io
 
 # DEVELOPMENT NOTES
 
