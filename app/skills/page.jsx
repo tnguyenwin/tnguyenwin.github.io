@@ -24,7 +24,7 @@ export default function Skills() {
         },
         {
             category: 'HOSTING PROVIDERS',
-            items: 'GitHub Pages--Cloudflare Pages--SmarterASP.net--Microsoft Azure--Vercel--Apache HTTP Server / XAMPP--Self-Hosting'
+            items: 'Cloudflare Pages--GitHub Pages--SmarterASP.net--Microsoft Azure--Vercel--Apache HTTP Server / XAMPP--Self-Hosting'
         },
         {
             category: 'WEBGL',
@@ -50,7 +50,7 @@ export default function Skills() {
         {
             category: 'C# FRAMEWORKS',
             items: '.NET',
-            subItems: { 0: 'ASP.NET--EF Core--ADO.NET' }
+            subItems: { 0: 'ASP.NET--ADO.NET--EF Core' }
         },
         {
             category: 'DATABASE',

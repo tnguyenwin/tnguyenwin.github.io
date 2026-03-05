@@ -33,6 +33,8 @@
     - Add custom icons per project.
     - Add lengthier descriptions of each project.
     - Add first person demos (ThreeJS, BabylonJS, PlayCanvas, Godot, GDevelop, Defold, etc.).
+- SKILLS
+    - Searchable skills.
 - RESUME
     - Complete resume page.
 - MISC

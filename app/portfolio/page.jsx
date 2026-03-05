@@ -22,7 +22,7 @@ export default function Portfolio() {
                         {
                             title: 'CAPSTONE',
                             image: '/pages/portfolio/capstone.jpg',
-                            body: 'Two-term, team website demo using ASP.NET, Tailwind CSS & SmarterASP.net.',
+                            body: 'Two-term, team website demo using ASP.NET, Tailwind CSS, & SmarterASP.net.',
                             buttons: (
                                 <>
                                     <PortfolioLink
@@ -50,7 +50,7 @@ export default function Portfolio() {
                             title: 'CO-OP',
                             image: '/pages/portfolio/ocdla.png',
                             imageIsBright: true,
-                            body: 'Reader for the Oregon Revised Statutes website using JSX, Tailwind CSS & GitHub Pages.',
+                            body: 'Reader for Oregon Revised Statutes website using JSX, Tailwind CSS, & GitHub Pages.',
                             buttons: (
                                 <>
                                     <PortfolioLink
@@ -76,7 +76,7 @@ export default function Portfolio() {
                         {
                             title: 'INTERMEDIATE MOBILE (JS)',
                             image: '/pages/portfolio/ghr_2.jpg',
-                            body: 'Term website demo using React Native, Nativewind, GitHub REST API & GitHub Pages.',
+                            body: 'Term website demo using React Native, Nativewind, GitHub REST API, & GitHub Pages.',
                             buttons: (
                                 <>
                                     <PortfolioLink
@@ -96,7 +96,7 @@ export default function Portfolio() {
                         {
                             title: 'INTERMEDIATE WEB (JS)',
                             image: '/pages/portfolio/ghr_1.jpg',
-                            body: 'Term website demo using Plain JavaScript, Bootstrap & GitHub REST API.',
+                            body: 'Term website demo using Plain JavaScript, Bootstrap, & GitHub REST API.',
                             buttons: (
                                 <>
                                     <PortfolioLink
@@ -122,7 +122,7 @@ export default function Portfolio() {
                         {
                             title: 'REACT.JS',
                             image: '/pages/portfolio/blog_posts.jpg',
-                            body: 'Term / labs website demo using React, JSON Server, Bootstrap, GitHub Pages & Vercel.',
+                            body: 'Term / labs website demo using React, JSON Server, Bootstrap, GitHub Pages, & Vercel.',
                             buttons: (
                                 <>
                                     <PortfolioLink
@@ -148,7 +148,7 @@ export default function Portfolio() {
                         {
                             title: 'ASP.NET (V2)',
                             image: '/pages/portfolio/term_2.jpg',
-                            body: 'Term website demo using ASP.NET, Tailwind CSS & SmarterASP.net.',
+                            body: 'Term website demo using ASP.NET, Tailwind CSS, & SmarterASP.net.',
                             buttons: (
                                 <>
                                     <PortfolioLink
@@ -168,7 +168,7 @@ export default function Portfolio() {
                         {
                             title: 'ASP.NET (V1)',
                             image: '/pages/portfolio/term_1.jpg',
-                            body: 'Term website demo ASP.NET, Bootstrap & SmarterASP.net (previously Microsoft Azure).',
+                            body: 'Term website demo ASP.NET, Bootstrap, & SmarterASP.net (previously Microsoft Azure).',
                             buttons: (
                                 <>
                                     <PortfolioLink
@@ -194,7 +194,7 @@ export default function Portfolio() {
                         {
                             title: 'ASP.NET (V2)',
                             image: '/pages/portfolio/labs_2.jpg',
-                            body: 'Labs website demo using ASP.NET, Tailwind CSS & SmarterASP.net.',
+                            body: 'Labs website demo using ASP.NET, Tailwind CSS, & SmarterASP.net.',
                             buttons: (
                                 <>
                                     <PortfolioLink
@@ -214,7 +214,7 @@ export default function Portfolio() {
                         {
                             title: 'ASP.NET (V1)',
                             image: '/pages/portfolio/labs_1.jpg',
-                            body: 'Labs website demo using ASP.NET, Bootstrap & SmarterASP.net (previously Microsoft Azure).',
+                            body: 'Labs website demo using ASP.NET, Bootstrap, & SmarterASP.net (previously Microsoft Azure).',
                             buttons: (
                                 <>
                                     <PortfolioLink
