@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
             <title>Trung Nguyen</title>
             <meta
                 name='description'
-                content="Trung Nguyen's Website"></meta>
+                content="Trung Nguyen's Portfolio Website"></meta>
             <link
                 rel='icon'
                 href='/global/avatar.png'
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
             {/* Facebook */}
             <meta
                 property='og:url'
-                content='https://tnguyen.github.io'
+                content='https://tnguyenwin.pages.dev'
             />
             <meta
                 property='og:type'
@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
             />
             <meta
                 property='og:image'
-                content='https://raw.githubusercontent.com/tnguyenwin/tnguyenwin.github.io/refs/heads/main/README.png'
+                content='https://tnguyenwin.pages.dev/global/website.png'
             />
             {/* Twitter */}
             <meta
@@ -50,11 +50,11 @@ export default function RootLayout({ children }) {
             />
             <meta
                 property='twitter:domain'
-                content='tnguyen.github.io'
+                content='https://tnguyenwin.pages.dev'
             />
             <meta
                 property='twitter:url'
-                content='https://tnguyen.github.io'
+                content='https://tnguyenwin.pages.dev'
             />
             <meta
                 name='twitter:title'
@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
             />
             <meta
                 name='twitter:image'
-                content='https://raw.githubusercontent.com/tnguyenwin/tnguyenwin.github.io/refs/heads/main/website.png'
+                content='https://tnguyenwin.pages.dev/global/website.png'
             />
 
             <body
