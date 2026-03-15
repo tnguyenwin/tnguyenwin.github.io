@@ -3,7 +3,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import SectionGeneric, { Row } from '../components/Section';
-import SkillsCategory from '../components/SkillsCategory';
+import Category from '../components/Category';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 
@@ -156,12 +156,12 @@ export default function Skills() {
                         <div className='grid gap-4 lg:grid-cols-3'>
                             {skillsCategories.map((item, i) => (
                                 <React.Fragment key={i}>
-                                    <SkillsCategory
+                                    <Category
                                         category={item.category}
                                         items={item.items}
                                         subItems={item.subItems}
                                     />
-                                    <SkillsCategory />
+                                    <Category />
                                 </React.Fragment>
                             ))}
                         </div>

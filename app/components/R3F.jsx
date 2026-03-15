@@ -67,7 +67,7 @@ export default function R3F({ extraClasses = '', path, credits }) {
                         <Html center>
                             <svg
                                 className={`size-40 animate-spin ${styleDefaults.textColor}`}
-                                xmlns='http://www.w3.org/2000/svg'
+                                xmlns='http://w3.org/2000/svg'
                                 fill='none'
                                 viewBox='0 0 24 24'>
                                 <circle

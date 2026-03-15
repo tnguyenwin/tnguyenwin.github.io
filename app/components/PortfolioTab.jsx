@@ -49,7 +49,7 @@ export default function PortfolioTab({
                         viewBox='0 0 512 512'
                         width='20px'
                         height='20px'
-                        xmlns='http://www.w3.org/2000/svg'>
+                        xmlns='http://w3.org/2000/svg'>
                         <path d='M82.64 48.26a51.94 51.94 0 0 0-51.68 51.94 51.94 51.94 0 0 0 42.2 50.9v209.7a51.94 51.94 0 0 0-42.2 51 51.94 51.94 0 0 0 51.94 51.9 51.94 51.94 0 0 0 51.9-51.9 51.94 51.94 0 0 0-42.15-51v-95.1H246.2v95.1a51.94 51.94 0 0 0-42.2 51 51.94 51.94 0 0 0 52 51.9 51.94 51.94 0 0 0 51.9-51.9 51.94 51.94 0 0 0-42.2-51v-95.1H438.8V151.1a51.94 51.94 0 0 0 42.2-50.9 51.94 51.94 0 0 0-51.9-51.94 51.94 51.94 0 0 0-.2 0 51.94 51.94 0 0 0-51.7 51.94 51.94 51.94 0 0 0 42.2 50.9v95.1H265.7v-95.1a51.94 51.94 0 0 0 42.2-50.9A51.94 51.94 0 0 0 256 48.26a51.94 51.94 0 0 0-.2 0A51.94 51.94 0 0 0 204 100.2a51.94 51.94 0 0 0 42.2 50.9v95.1H92.65v-95.1a51.94 51.94 0 0 0 42.15-50.9 51.94 51.94 0 0 0-51.9-51.94 51.94 51.94 0 0 0-.26 0z'></path>
                     </svg>
                 ) : isCategory && title === 'Business' ? (
@@ -61,7 +61,7 @@ export default function PortfolioTab({
                         viewBox='0 0 24 24'
                         width='20px'
                         height='20px'
-                        xmlns='http://www.w3.org/2000/svg'>
+                        xmlns='http://w3.org/2000/svg'>
                         <path
                             fill='none'
                             d='M0 0h24v24H0zm10 5h4v2h-4zm0 0h4v2h-4z'></path>
@@ -78,7 +78,7 @@ export default function PortfolioTab({
                         strokeLinejoin='round'
                         width='20px'
                         height='20px'
-                        xmlns='http://www.w3.org/2000/svg'>
+                        xmlns='http://w3.org/2000/svg'>
                         <path d='M8 2v4'></path>
                         <path d='M12 2v4'></path>
                         <path d='M16 2v4'></path>

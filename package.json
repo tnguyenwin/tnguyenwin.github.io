@@ -1,13 +1,14 @@
 {
     "name": "portfolio",
     "version": "0.1.0",
-    "private": true,
     "scripts": {
         "dev": "next dev --turbopack -p 80",
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "serve": "serve out --listen 80"
+        "serve": "serve out --listen 80",
+        "wrangler-dev": "wrangler pages dev --port=80",
+        "wrangler-deploy": "wrangler pages deploy"
     },
     "dependencies": {
         "@react-three/drei": "^10.3.0",
@@ -25,6 +26,7 @@
         "prettier": "^3.5.3",
         "prettier-plugin-tailwindcss": "^0.6.12",
         "serve": "^14.2.4",
-        "tailwindcss": "^4"
+        "tailwindcss": "^4",
+        "wrangler": "^4.73.0"
     }
 }

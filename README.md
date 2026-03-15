@@ -20,19 +20,24 @@
 ### TODO
 
 - HEADER
+    - Fix mobile icon aligned to left (not right) when zoomed-in.
     - Implement dropdown menus for mobile navbar.
     - Complete breadcrumbs for non-home pages.
 - HOMEPAGE
-    - Add showcase and/or skills sections'.
+    - Improve 3D models.
     - Add mobile, touch-based visibility toggling for 3D model credits.
+    - Add showcase and/or skills sections'.
 - BLOG
     - Complete individual blog pages.
     - Use Jekyll for Blog page by using custom \_config.yml file in Blog directory (OR) make Blog page use Markdown instead of Database and make Showcase page use Database instead.
 - PORTFOLIO
+    - Fix slow hyperlink icon color change on hover for portfolio items.
     - Add animation transition for tab toggling.
     - Add custom icons per project.
     - Add lengthier descriptions of each project.
     - Add first person demos (ThreeJS, BabylonJS, PlayCanvas, Godot, GDevelop, Defold, etc.).
+    - Add LCC fetch emails from course app.
+    - Searchable skills.
 - SKILLS
     - Searchable skills.
 - RESUME

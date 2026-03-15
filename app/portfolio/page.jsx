@@ -237,15 +237,64 @@ export default function Portfolio() {
         },
         {
             category: 'Business',
-            // Top 10 F500 Companies
             projectsParent: [
+                // Pawesome Bingo
                 {
-                    projectName: 'Top 10 F500 Companies',
+                    projectName: 'Pawesome Bingo',
                     projectsChildren: [
                         {
-                            title: 'TOP 10 F500 COMPANIES',
+                            title: 'PROJECT MGMT 1 & 2',
+                            image: '/pages/portfolio/pb.jpg',
+                            imageIsBright: true,
+                            body: 'Website for two-term, non-profit fundraising event using Webflow & Cloudflare Pages.',
+                            buttons: (
+                                <>
+                                    <PortfolioLink
+                                        isPrimary={true}
+                                        href={'https://pawesomebingo.pages.dev'}
+                                    />
+                                    <PortfolioLink
+                                        href={
+                                            'https://github.com/pawesomebingo/pawesomebingo.github.io'
+                                        }
+                                    />
+                                </>
+                            )
+                        }
+                    ]
+                },
+                // Advanced Excel
+                {
+                    projectName: 'TOP 10 F500 COMPANIES ',
+                    projectsChildren: [
+                        {
+                            title: 'Advanced Excel',
                             image: '/pages/portfolio/excel_f500.jpg',
                             body: 'Presentation slide of top ten Fortune 500 companies from 2017 using Google Sheets & Slides.'
+                        }
+                    ]
+                },
+                // My Portfolio
+                {
+                    projectName: 'My Portfolio',
+                    projectsChildren: [
+                        {
+                            title: 'Personal Portfolio',
+                            image: '/global/website.png',
+                            body: 'Portfolio site using Next.js & Cloudflare Pages.',
+                            buttons: (
+                                <>
+                                    <PortfolioLink
+                                        isPrimary={true}
+                                        href={'https://tnguyenwin.pages.dev'}
+                                    />
+                                    <PortfolioLink
+                                        href={
+                                            'https://github.com/tnguyenwin/tnguyenwin.github.io'
+                                        }
+                                    />
+                                </>
+                            )
                         }
                     ]
                 }
@@ -391,7 +440,7 @@ export default function Portfolio() {
                                                             ? '128px'
                                                             : '96px'
                                                     }
-                                                    xmlns='http://www.w3.org/2000/svg'>
+                                                    xmlns='http://w3.org/2000/svg'>
                                                     <path d='M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z'></path>
                                                 </svg>
                                             </div>

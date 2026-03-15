@@ -5,6 +5,8 @@ ECHO 1 - [ dev ]
 @REM ECHO 2 - [ optimize-glb ]
 ECHO 2 - [ build ]
 ECHO 3 - [ serve ]
+ECHO 7 - [ wrangler-dev ]
+ECHO 8 - [ wrangler-deploy ]
 ECHO 9 - [ git reset --soft HEAD~1 ]
 ECHO 0 - [ upgrade-interactive --latest ]
 ECHO ----
@@ -27,10 +29,17 @@ IF %input% == 3 (
     CALL yarn run serve
 )
 
+IF %input% == 7 (
+    CALL npm run wrangler-dev
+)
+
+IF %input% == 8 (
+    CALL npm run wrangler-deploy
+)
+
 IF %input% == 9 (
     CALL git reset --soft HEAD~1
 )
-
 
 IF %input% == 0 (
     CALL yarn upgrade-interactive --latest

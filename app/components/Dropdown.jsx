@@ -44,12 +44,12 @@ export default function Dropdown({
                             viewBox='0 0 448 512'
                             height='12px'
                             width='12px'
-                            xmlns='http://www.w3.org/2000/svg'>
+                            xmlns='http://w3.org/2000/svg'>
                             <path d='M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z'></path>
                         </svg>
                         {/* Dropdown Items */}
                         <ul
-                            className={`invisible z-2 bg-[rgba(255,255,255,0.75)] opacity-0 backdrop-blur-lg transition-opacity duration-200 ease-in-out lg:w-max lg:grid-cols-1 lg:group-hover:visible lg:group-hover:opacity-100 xl:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] dark:bg-[rgba(15,15,19,0.75)] ${styleDefaults.borderColor} absolute top-[calc(200%-4px)] left-[-1rem] flex gap-4 rounded-b-[0.5rem] border p-4 text-white shadow-xs dark:shadow-md ${styleDefaults.shadowColor}`}>
+                            className={`invisible z-2 grid bg-[rgba(255,255,255,0.75)] opacity-0 backdrop-blur-lg transition-opacity duration-200 ease-in-out lg:w-max lg:grid-cols-1 lg:group-hover:visible lg:group-hover:opacity-100 xl:grid-cols-2 dark:bg-[rgba(15,15,19,0.75)] ${styleDefaults.borderColor} absolute top-[calc(200%-4px)] left-[-1rem] flex gap-4 rounded-b-[0.5rem] border p-4 text-white shadow-xs dark:shadow-md ${styleDefaults.shadowColor}`}>
                             {itemsDesktop.map((item, id) => (
                                 <li
                                     key={id}

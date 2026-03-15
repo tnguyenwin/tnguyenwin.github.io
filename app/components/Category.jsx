@@ -2,7 +2,7 @@
 
 import { styleDefaults } from '../globals';
 
-export default function SkillsCategory({ category, items, subItems }) {
+export default function Category({ category, items, subItems }) {
     return category ? (
         <div
             id={category.toLowerCase().replace(' ', '-')}
