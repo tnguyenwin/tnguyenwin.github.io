@@ -3,6 +3,8 @@
 import { styleDefaults } from '../globals';
 
 export default function Category({ category, items, subItems }) {
+    const stringWIP = 'WIP';
+
     return category ? (
         <div
             id={category.toLowerCase().replace(' ', '-')}
@@ -20,7 +22,16 @@ export default function Category({ category, items, subItems }) {
                                 <ul
                                     className={`${styleDefaults.textColorSecondary} ms-4 flex list-inside list-disc flex-col gap-2 [&>*:first-child]:mt-2`}>
                                     {subList.map((subItem, i2) => (
-                                        <li key={i2}>{subItem}</li>
+                                        <li key={i2}>
+                                            {subItem.includes(stringWIP) && (
+                                                <span className='me-1 rounded-lg border border-yellow-400 bg-yellow-100 px-1 py-px text-yellow-600 dark:border-yellow-600 dark:bg-yellow-900 dark:text-yellow-300'>
+                                                    WIP
+                                                </span>
+                                            )}{' '}
+                                            {subItem.includes(stringWIP)
+                                                ? subItem.replace(stringWIP, '')
+                                                : subItem}
+                                        </li>
                                     ))}
                                 </ul>
                             )}

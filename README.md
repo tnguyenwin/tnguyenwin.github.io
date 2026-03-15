@@ -40,6 +40,8 @@
     - Searchable skills.
 - SKILLS
     - Searchable skills.
+- SKILLS & COURSES
+    - Replace string system with JSON system.
 - RESUME
     - Complete resume page.
 - MISC
