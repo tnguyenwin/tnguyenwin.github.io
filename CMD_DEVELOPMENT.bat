@@ -1,4 +1,4 @@
-@ECHO OFF
+@ECHO off
 
 ECHO ----
 ECHO 1 - [ dev ]
@@ -30,11 +30,11 @@ IF %input% == 3 (
 )
 
 IF %input% == 7 (
-    CALL npm run wrangler-dev
+    CALL yarn run wrangler-dev
 )
 
 IF %input% == 8 (
-    CALL npm run wrangler-deploy
+    CALL yarn run wrangler-deploy
 )
 
 IF %input% == 9 (
