@@ -54,11 +54,11 @@ export default function Skills() {
         },
         {
             category: 'DATABASE',
-            items: 'MySQL--MySQL Workbench--MSSQL--SSMS'
+            items: 'MSSQL--SSMS--MySQL--MySQL Workbench'
         },
         {
             category: 'API',
-            items: 'GitHub REST API--OpenWeatherMap API--Google Maps API--Postman--Swagger UI--Fiddler'
+            items: 'GitHub REST API--Google Apps Scripts--Google Maps API--OpenWeatherMap API--Postman--Swagger UI--Fiddler'
         },
         {
             category: 'CYBERSECURITY',
@@ -74,7 +74,7 @@ export default function Skills() {
         },
         {
             category: 'PACKAGE MANAGERS',
-            items: 'NPM--Yarn--NuGet--PIP'
+            items: 'NPM--Yarn--PIP--NuGet'
         },
         {
             category: 'PROJECT MANAGEMENT',

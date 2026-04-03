@@ -11,6 +11,7 @@
         "wrangler-deploy": "wrangler pages deploy"
     },
     "dependencies": {
+        "-": "^0.0.1",
         "@react-three/drei": "^10.3.0",
         "@react-three/fiber": "^9.1.2",
         "next": "15.3.3",
@@ -27,6 +28,6 @@
         "prettier-plugin-tailwindcss": "^0.6.12",
         "serve": "^14.2.4",
         "tailwindcss": "^4",
-        "wrangler": "4.77.0"
+        "wrangler": "^4.80.0"
     }
 }
