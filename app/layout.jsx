@@ -5,7 +5,6 @@ import './fonts/font_face_geist_mono.css';
 import './fonts/font_face_orbitron.css';
 import './globals.css';
 import { styleDefaults } from './globals';
-import Script from 'next/script';
 import { ThemeProvider } from 'next-themes';
 
 export default function RootLayout({ children }) {
@@ -69,12 +68,6 @@ export default function RootLayout({ children }) {
                 name='twitter:image'
                 content='https://tnguyenwin.pages.dev/global/website.png'
             />
-            <Script
-                defer
-                src='https://static.cloudflareinsights.com/beacon.min.js'
-                strategy='afterInteractive'
-                data-cf-beacon='{"token": "c5372e68163c453a818fc10fd3615691"}'
-            />
             <body
                 className={`font-['Geist'] font-medium ${styleDefaults.backgroundColor} ${styleDefaults.textColor} tracking-tight antialiased`}>
                 <noscript>Page Requires JavaScript Enabled</noscript>
@@ -86,6 +79,10 @@ export default function RootLayout({ children }) {
                     storageKey='theme-tnguyen'>
                     {children}
                 </ThemeProvider>
+                <script
+                    defer
+                    src='https://static.cloudflareinsights.com/beacon.min.js'
+                    data-cf-beacon='{"token": "c5372e68163c453a818fc10fd3615691"}'></script>
             </body>
         </html>
     );
