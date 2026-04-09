@@ -61,6 +61,10 @@ export default function Skills() {
             items: 'GitHub REST API--Google Apps Scripts--Google Maps API--OpenWeatherMap API--Postman--Swagger UI--Fiddler'
         },
         {
+            category: 'ANALYTICS',
+            items: 'Cloudflare Account & Web Analytics'
+        },
+        {
             category: 'CYBERSECURITY',
             items: 'Tampermonkey--BurpSuite--ZAP--Apache JMeter--Cheat Engine'
         },
