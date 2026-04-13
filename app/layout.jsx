@@ -82,7 +82,7 @@ export default function RootLayout({ children }) {
                 <script
                     defer
                     src='https://static.cloudflareinsights.com/beacon.min.js'
-                    data-cf-beacon={`{"token": "c5372e68163c453a818fc10fd3615691"}`}></script>
+                    data-cf-beacon="{'token': 'c5372e68163c453a818fc10fd3615691'}"></script>
             </body>
         </html>
     );

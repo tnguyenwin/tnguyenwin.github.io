@@ -11,11 +11,11 @@ export default function Skills() {
     const skillsCategories = [
         {
             category: 'LANGUAGES',
-            items: 'HTML--CSS--JS & Node.js--C#--Python--SQL--Batch, PowerShell & Bash--WASM--GLSL--PHP--Java'
+            items: 'HTML--CSS--JS & Node.js--C#--SQL--Python--Batch, PowerShell & Bash--WASM--GLSL--PHP--Java'
         },
         {
             category: 'WEBSITE BUILDERS',
-            items: 'Webflow--Framer--WordPress--Wix--Squarespace--Shopify--Google Sites--Canva Sites--Weebly--Grapes.js',
+            items: 'Webflow--Framer--WordPress--Wix--Squarespace--Shopify--Weebly--Google Sites--Canva Sites--Grapes.js',
             subItems: {
                 2: 'WordPress.org (self-host)--WordPress.com (cloud)--Elementor (plugin)--Gutenberg (plugin)',
                 3: 'Classic (editor)--Editor X (editor)--Studio (editor)--Blocks (editor)--Codux (application)',
@@ -24,7 +24,7 @@ export default function Skills() {
         },
         {
             category: 'HOSTING PROVIDERS',
-            items: 'Cloudflare Pages--GitHub Pages--SmarterASP.net--Microsoft Azure--Vercel--Apache HTTP Server / XAMPP--Self-Hosting'
+            items: 'Cloudflare Pages--GitHub Pages--SmarterASP.net--Vercel--HTTPD--Microsoft Azure--Appwrite--Self-Hosting (Node.js, Python, VSC LiveServer extension, etc.)'
         },
         {
             category: 'WEBGL',
@@ -50,7 +50,7 @@ export default function Skills() {
         {
             category: 'C# FRAMEWORKS',
             items: '.NET',
-            subItems: { 0: 'ASP.NET--ADO.NET--EF Core' }
+            subItems: { 0: 'ASP.NET Core--ADO.NET--EF Core--Identity' }
         },
         {
             category: 'DATABASE',
@@ -66,7 +66,7 @@ export default function Skills() {
         },
         {
             category: 'CYBERSECURITY',
-            items: 'Tampermonkey--BurpSuite--ZAP--Apache JMeter--Cheat Engine'
+            items: 'Tampermonkey--BurpSuite--OWASP ZAP--Apache JMeter--Cheat Engine'
         },
         {
             category: 'GIT CLIENTS & UI',

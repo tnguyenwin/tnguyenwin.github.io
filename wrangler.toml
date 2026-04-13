@@ -1,2 +1,5 @@
 name = "tnguyenwin"
 pages_build_output_dir = "out"
+[dev]
+port = 80
+local_protocol = "http"

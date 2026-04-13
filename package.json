@@ -7,7 +7,7 @@
         "start": "next start",
         "lint": "next lint",
         "serve": "serve out --listen 80",
-        "wrangler-dev": "wrangler pages dev --port=80",
+        "wrangler-dev": "wrangler pages dev",
         "wrangler-deploy": "wrangler pages deploy"
     },
     "dependencies": {
@@ -28,6 +28,6 @@
         "prettier-plugin-tailwindcss": "^0.6.12",
         "serve": "^14.2.4",
         "tailwindcss": "^4",
-        "wrangler": "^4.81.0"
+        "wrangler": "^4.81.1"
     }
 }
